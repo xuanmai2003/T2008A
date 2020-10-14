@@ -30,32 +30,3 @@
 			margin-left: -60px; width: 386px; list-style-type: none; text-align: right; padding-bottom: 5px;
 		}
 
-.textarea{
-	overflow: auto;
-}
-form{
-	margin-left: 20px;
-}
-.put{
-	padding-top:17px;
-	padding-bottom: 13px;
-	font-size: 25px;
-	font-weight: bold;
-}
-.send{
-	position: absolute;
-	top: 217px;
-	left: 387px;
-}
-.help{
-	position: absolute;
-	top: 28px;
-    right: 695px;
-    font-size: 20px;
-    font-family:arial;
-    color: #2c24d1;
-    font-weight: bold;
-}
-a{
-	text-decoration: none;
-}
