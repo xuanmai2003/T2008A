@@ -2,8 +2,8 @@
 			background-color:rgb(255,255,240); padding: 20%
 		}
 
-		.textarea{
-			scroll-bar-color: #C0C0C0;
+		textarea{
+			scroll-bar-color: #C0C0C0; scrollbar-shadow-color: silver; scrollbar-arrow-color: black; scrollbar-face-color: gray;
 		}
 
 		.imgHelp{
@@ -29,4 +29,3 @@
 		#compose{
 			margin-left: -60px; width: 386px; list-style-type: none; text-align: right; padding-bottom: 5px;
 		}
-
