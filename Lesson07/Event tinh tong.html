@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tinh tong</title>
+</head>
+<body>
+	<table border="1" cellspacing="0" cellpadding="5">
+		<tr style="background-color: blue; color: white; text-align: left;"><th>Giai phuong trinh bac 1</th></tr>
+		<tr ><th>
+			<input type="button" value="Nhap Gia tri A" onclick="nhapgiatriA()">
+			<input type="button" value="Nhap Gia tri B" onclick="nhapgiatriB()">
+			<input type="button" value="In ket qua" onclick="ketqua()">
+		</th></tr>
+	</table>
+
+	<script type="text/javascript">
+		function nhapgiatriA(){
+			A = parseFloat(prompt('Nhap gia tri A')) 
+		}
+
+		function nhapgiatriB(){
+			B = parseFloat(prompt('Nhap gia tri B'))
+		}
+		
+		function ketqua(){
+			var result = A + B
+			alert('Tong cua A,B = '+result)
+		}
+	</script>
+</body>
+</html>

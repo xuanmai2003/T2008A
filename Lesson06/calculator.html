@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculator</title>
+</head>
+<body>
+	<script type="text/javascript">
+		a = prompt("Nhap gia tri cua a")
+		pheptinh = prompt("Nhap phep tinh + - * /")
+		b = prompt("Nhap gia tri cua b")
+
+		function phepcong(a,b){
+			return parseInt(a) + parseInt(b);
+		}
+
+		function pheptru(a,b){
+			return a-b;
+		}
+
+		function phepnhan(a,b){
+			return a*b;
+		}
+
+		function phepchia(a,b){
+			return a/b;
+		}
+
+		document.write('Ket qua cua phep tinh '+a+pheptinh+b+' =')
+
+		if(pheptinh==='+'){
+			document.write(phepcong(a,b))
+		} else if (pheptinh==='-'){
+			document.write(pheptru(a,b))
+		} else if (pheptinh==='*'){
+			document.write(phepnhan(a,b))
+		} else {
+			document.write(phepchia(a,b))
+		}
+	</script>
+</body>
+</html>

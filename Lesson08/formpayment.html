@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Purchase Order Form</title>
+	<style type="text/css">
+		.panel{
+			border: solid grey 1px;
+			background-color: #ccf0c9;
+			width:1000px; 
+		}
+
+		.panel-heading{
+			background-color: #babbf5;
+			font-size: x-large;
+			border: solid grey 1px;
+			width: 250px;
+			color:blue;
+			font-weight: bold; 
+			padding: 10px;
+			margin-top: 10px;
+			margin-left: 10px;
+		}
+
+		.panel-body{
+			padding-left: 10px;
+			padding-top: 5px;
+			color: #373ae6;
+			font-weight: bold;
+		}
+
+		.form-group{
+			color: black;
+			font-weight: normal;
+			padding: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="panel">
+		<div class="panel-heading">Purchase Order Form</div>
+		<div class="panel-body">
+			Product Information
+			<div class="form-group">
+				<table border="1" cellspacing="2" cellpadding="3" style="border-color: blue">
+					<tr>
+						<td>Product:</td>
+						<td><select id="product" onchange="enable1()" required="true">
+							<option>--Select--</option>
+						</select></td>
+					</tr>
+					<tr>
+						<td>Unit Price($):</td>
+						<td><input type="number" name="price" id="price" onfocus="onfocus()" onkeyup="updateTotalPrice()" required="true"></td>
+					</tr>
+					<tr>
+						<td>Quantity:</td>
+						<td><input type="number" name="quantity" id="quantity" onfocus="onfocus()" onkeyup="updateTotalPrice()" required="true"></td>
+					</tr>
+					<tr>
+						<td>Total Price($):</td>
+						<td><input type="number" name="totalprice" id="totalprice" onfocus="onfocus()" disabled="true" required="true"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<br>
+		<div class="panel-body">
+			Shipping Information
+			<div class="form-group">
+				<table border="1" cellspacing="2" cellpadding="3" style="border-color: blue">
+					<tr>
+						<td>Full Name:</td>
+						<td><input type="text" name="name" id="fname" onfocus="onfocus()" required="true"></td>
+					</tr>
+					<tr>
+						<td>Shipping Address:</td>
+						<td><input type="text" name="address" id="address" onfocus="onfocus()" required="true"></td>
+					</tr>
+					<tr>
+						<td>Credit Card:</td>
+						<td><select id="card" onchange="enable2()" required="true">
+							<option>--Select--</option>
+							<option>VISA</option>
+							<option>Master Card</option>
+							<option>American Express</option>
+						</select></td>
+					</tr>
+					<tr>
+						<td>Credit Card Number:</td>
+						<td>
+							<input type="number" name="cardnumber" id="cardnumber" onfocus="onfocus()" style="width: 50px" maxlength="4" required="true">
+							<input type="number" name="cardnumber" id="cardnumber" onfocus="onfocus()" style="width: 50px" maxlength="4" required="true">
+							<input type="number" name="cardnumber" id="cardnumber" onfocus="onfocus()"style="width: 50px" maxlength="4" required="true"
+							<input type="number" name="cardnumber" id="cardnumber" onfocus="onfocus()"style="width: 50px" maxlength="4" required="true">
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div style="padding-left: 10px ">
+			<button type="button">Submit</button>	
+			<button>Reset</button>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		var productList = {
+			"Comfort Sleeper":[],
+			"Morgan Kids Bed":[],
+			"Entertainment Cabinet":[]
+		}
+
+		var productTag = document.getElementById('product')
+		for(var key in productList) {
+			productTag.innerHTML += `<option value='${key}'>${key}</option>`
+		}
+
+		function onfocus(){
+			var inputList = document.getElementsByTagName('input')
+			console.log(inputList)
+
+			for (var i = 0; i < inputList.length; i++) {
+				inputList[i].style.backgroundColor = 'yellow'
+				inputList[i].value = i
+			}
+		}
+
+		function enable1(){
+			if(document.getElementsById('product').value = '--Select--'){
+				document.getElementById('price').disabled = true;
+				document.getElementById('quantity').disabled = true;
+			}else{
+				document.getElementById('price').disabled = false;
+				document.getElementById('quantity').disabled = false;
+			}
+		}
+
+		function enable2(){
+			if(document.getElementById('card').value = '--Select--'){
+				document.getElementById('cardnumber').disabled = true;
+			}
+		}
+
+		function updateTotalPrice() {
+			var price = document.getElementById('price').value
+			var quantity = document.getElementById('quantity').value
+			totalprice = price * quantity
+			document.getElementById('totalprice').value = totalprice
+		}
+	</script>
+</body>
+</html>

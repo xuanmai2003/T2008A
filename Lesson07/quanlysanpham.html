@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quan ly san pham</title>
+</head>
+<body>
+	<table border="1" cellspacing="0" cellpadding="5" style="border-color: blue">
+		<tr style="background-color: blue; color: white; text-align: left;"><th>Input product's detail information</th></tr>
+		<tr ><td>
+			<label>Product Name></label>
+			<br>
+			<input type="text" name="product" id="product" style="background-color: #f5dec1; width: 700px">
+			<br>
+			<label>Manufacturer Name</label>
+			<br>
+			<select id="mname" onchange="selectmanuf">
+				<option value="">-- Manufacturer --</option>
+				<option value="Apple">Apple</option>
+				<option value="Samsung">Samsung</option>
+				<option value="LG">LG</option>
+				<option value="Sony">Sony</option>
+				<option value="Google">Google</option>
+			</select>
+			<br>
+			<label>Category Name</label>
+			<br>
+			<select id="category"></select>
+			<br>
+			<label>Price</label>
+			<br>
+			<input type="text" name="price" id="price" style=" width: 700px" onkeyup="updateTotalPrice()">
+			<br>
+			<label>Quantity</label>
+			<br>
+			<input type="text" name="quantity" style=" width: 700px" id="quantity">
+			<br>
+			<label>Total Price</label>
+			<br>
+			<input type="text" name="product" id="totalprice" style="background-color: #ccc8be; width: 700px">
+			<br>
+			<button type="button">Add Product</button>	
+			<button>Reset</button>
+		</td></tr>
+	</table>
+	<br>
+	<table border="1" cellspacing="0" cellpadding="3">
+		<tr style="background-color: blue; color: white; text-align: left;"><th>Management Products</th></tr>
+		<tr><td>
+			<table border="1" cellspacing="0">
+			<thead>
+			<tr>
+				<th>No</th>
+				<th>Product name</th>
+				<th>Manufacturer name</th>
+				<th>Category name</th>
+				<th>Price</th>
+				<th>Quantity</th>
+			</tr>
+			</thead>
+			<tbody id="productlist">
+			</tbody>
+		</table>
+		</td></tr>
+	</table>
+
+	<script type="text/javascript">
+		function selectmanuf(){
+			var manuf = document.getElementById('mname').value
+			if(manuf = 'Apple'){
+				var manu1=document.getElementById('category');
+                        manu1.innerHTML=`
+                        <option>--Select--</option>
+                        <option>Iphone X</option>
+                        <option>Ipad</option>
+                        <option>Ipad Pro</option>
+                        `
+			}else if(manuf = 'Samsung'){
+				var manu2=document.getElementById('category');
+                        manu2.innerHTML=`
+                        <option>--Select--</option>
+                        <option>Samsung Galaxy</option>
+                        <option>Samsung Note</option>
+                        <option>Samsung Galaxy Watch</option>
+                        `
+			}
+			else if(manuf = 'LG'){
+				var manu3=document.getElementById('category');
+                        manu3.innerHTML=`
+                        <option>--Select--</option>
+                        <option>Television</option>
+                        <option>Laptop</option>
+                        <option>Fridge</option>
+                        `
+			}
+			else if(manuf = 'Sony'){
+				var manu4=document.getElementById('category');
+                        manu4.innerHTML=`
+                        <option>--Select--</option>
+                        <option>Television</option>
+                        <option>Playstation</option>
+                        <option>Camera</option>
+                        `
+			} else {
+				var manu5=document.getElementById('category');
+                        manu5.innerHTML=`
+                        <option>--Select--</option>
+                        <option>Pixel</option>
+                        <option>Stadia</option>
+                        <option>Nest</option>
+                        `
+			}
+		}
+
+		function updateTotalPrice(){
+			var quantity = document.getElementById('quantity').value
+			var price = document.getElementById('price').value
+			totalprice = quantity*price
+			document.getElementById('totalprice').value = totalprice
+		}
+
+		var count = 0;
+
+		function addPro() {
+			var product = document.getElementById('product').value
+			var manufacturer = document.getElementById('mname').value
+			var category = document.getElementById('category').value
+			var price = document.getElementById('price').value
+			var quantity = document.getElementById('quantity').value
+			var totalprice = document.getElementById('totalprice').value
+
+			var dataTag = document.getElementById('productlist')
+			dataTag.innerHTML += `
+				<tr>
+					<td>${++count}</td>
+					<td>${fullname}</td>
+					<td>${address}</td>
+				</tr>`
+		}
+	</script>
+</body>
+</html>

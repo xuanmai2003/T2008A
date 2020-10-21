@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Tutorial</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.row {
+			display: flex;
+			width: 100%;
+			padding-bottom: 20px;
+		}
+		.col-lg-4 {
+			float: left;
+			width: 40%;
+			text-align: right;
+			padding-right: 20px;
+		}
+		.col-lg-8 {
+			float: left;
+			width: 60%;
+		}
+	</style>
+</head>
+<body>
+<div class="row">
+	<div class="col-lg-4">
+		Fullname:
+	</div>
+	<div class="col-lg-8">
+		<input type="text" name="fullname" id="fname" onchange="onChangeFullname()">
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-4">
+		Address:
+	</div>
+	<div class="col-lg-8">
+		<input type="text" name="address" id="add" onkeyup="onKeyUpAddress()">
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-4">
+	</div>
+	<div class="col-lg-8">
+		<input type="button" value="Submit" onclick="addUser()" />
+	</div>
+</div>
+<div class="row">
+	<table border="1">
+		<thead>
+			<tr>
+				<th>STT</th>
+				<th>Fullname</th>
+				<th>Address</th>
+			</tr>
+		</thead>
+		<tbody id="userlist">
+		</tbody>
+	</table>
+</div>
+
+<script type="text/javascript">
+	var count = 0;
+
+	function addUser() {
+		var fullnameTag = document.getElementById('fname')
+		var addressTag = document.getElementById('add')
+
+		var fullname = fullnameTag.value
+		var address = addressTag.value
+
+		var dataTag = document.getElementById('userlist')
+		dataTag.innerHTML += `
+			<tr>
+				<td>${++count}</td>
+				<td>${fullname}</td>
+				<td>${address}</td>
+			</tr>`
+	}
+
+	function clickSubmit() {
+		//xu ly code
+		// alert('Hello World!!!')
+		//B1. convert tag html => class object
+		var fullnameTag = document.getElementById('fname')
+		console.log(fullnameTag)
+		fullnameTag.value = 'TETSTDSDASD'
+		console.log(fullnameTag.value)
+		fullnameTag.style.color = 'RED'
+		fullnameTag.style.backgroundColor = 'yellow'
+
+		//tagname, classname, name.
+		var inputList = document.getElementsByTagName('input')
+		console.log(inputList)
+
+		for (var i = 0; i < inputList.length; i++) {
+			inputList[i].style.backgroundColor = 'green'
+			inputList[i].value = i
+			inputList[i].style.color = 'white'
+		}
+	}
+
+	function onKeyUpAddress() {
+		console.log('test....')
+	}
+
+	function onChangeFullname() {
+		console.log('change....')
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Java</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//khai bao mang
+		var arr1 = []//mang rong
+		//js: quan ly cac phan tu dong -> int,float,string,object -> nen quan ly cung database
+		console.log(arr1.length)
+		//them phan tu vao mang
+		arr1.push(12)
+		arr1.push(1)
+		arr1.push(2)
+		console.log(arr1[23])
+		for (var i = 0; i < arr1.length; i++) {
+		 	console.log("<<<" + arr1[i])
+		}
+		//khai bao mang co san cac phan tu
+		var arr2 = [1,2,5]
+		for (var i = 0; i < arr2.length; i++) {
+			console.log(arr2[i])
+		}
+		//hien thi cac phan tu trong mang
+		//for => nhu tren.
+
+		//xoa va them phan tu
+		arr2.splice(1,1)
+		arr2.push(9);
+		arr2.splice(2, 0, 7, 65, 234, 324);
+		for (var i = 0; i < arr2.length; i++) {
+			console.log("???"+arr2[i])
+		}
+
+		arr2 = arr2.sort(function(a, b) {
+			return a - b;
+			//gia tri >= 0 => giu nguyen vi tri
+			//gia tri < 0 => doi cho 2 vi tri.
+		})
+		
+		for (var i = 0; i < arr2.length; i++) {
+			console.log("---"+arr2[i])
+		}
+
+		//Tim hieu ve object
+		//Sinh vien: ten => A, tuoi => 18, dia chi => Ha Noi
+		var student = {
+			fullname: 'A',
+			age: 18,
+			address: 'Ha Noi'
+		}
+		console.log(student)
+		console.log(student.fullname)
+		console.log(student.address)
+
+		student.fullname = "ABCBABCBS"//thay doi noi dung mang
+
+		console.log(student.fullname)
+
+		var studentList = [
+			{
+				fullname: 'A',
+				age: 18,
+				address: 'Ha Noi'
+			}, {
+				fullname: 'B',
+				age: 28,
+				address: 'Ha Noi'
+			}
+		]
+
+		console.log(studentList)
+
+		studentList.push({
+				fullname: 'B',
+				age: 28,
+				address: 'Ha Noi'
+			});
+		student =  {
+			fullname: 'B',
+			age: 28,
+			address: 'Ha Noi'
+		};
+
+		studentList.push(student)
+
+		console.log(studentList)
+
+		//Kieu du lieu khac nhau trong 1 mang => JS.
+		var a = [
+			1,
+			2,
+			{
+				"fullname": "A"
+			}
+		]
+		console.log(a)
+
+		function showMessage(msg) {
+			alert(msg)
+		}
+
+		showMessage("ABC")
+
+		function tinhTong(x, y) {
+			return x + y;
+		}
+
+		tong = tinhTong(5, 8)
+		alert(tong)
+
+		str = "123456789345"
+		c = str.charAt(1)
+		str = str.concat('ABC')
+		index = str.lastIndexOf('345')
+		alert(index)
+	</script>
+</body>
+</html>

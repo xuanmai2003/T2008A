@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quan Ly Sinh Vien</title>
+</head>
+<body style="font-family: calibri">
+	<table border="1" cellspacing="0"  style="border-color: blue ;width: 600px; height: 40px;">
+		<tr style="background-color: blue; color: white; text-align: left;"><th>Management Products</th></tr>
+		<tr><table border="1" cellspacing="0" style="border-color: black; width: 600px; padding: 10px">
+			<script type="text/javascript">
+				var studentList = []
+				for(i=0;i<20;i++){
+					alert('Thong tin sinh vien thu '+(i+1))
+					student = {
+						fullname: '',
+						age: 0,
+						address: '',
+						email: ''
+					}
+					student.fullname= prompt('Nhap ten:')
+					student.age= prompt('Nhap tuoi:')
+					student.address= prompt('Nhap dia chi:')
+					student.email= prompt('Nhap email:')
+					studentList.push(student)
+				}
+				document.write('<tr>')
+				document.write('<th>'+ 'STT' + '</th>')
+		        document.write('<th>'+ 'Ten' + '</th>')
+		        document.write('<th>'+ 'Tuoi' + '</th>')
+		        document.write('<th>'+ 'Dia chi' + '</th>')
+		        document.write('<th>'+ 'Email' + '</th>')
+		        document.write('</tr>')
+		        for(i=0;i<20;i++){
+		        	document.write('<tr>')
+		        	document.write('<td>' + (i+1) + '</td>')
+					document.write('<td>'+ studentList[i].fullname + '</td>')
+			        document.write('<td>'+ studentList[i].age + '</td>')
+			        document.write('<td>'+ studentList[i].address + '</td>')
+			        document.write('<td>'+ studentList[i].email + '</td>')
+			        document.write('</tr>')
+		        }
+		        document.write('</table>')
+		</script>
+		</table></tr>
+	</table>
+</body>
+</html>
