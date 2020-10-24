@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>show</title>
+</head>
+<body>
+	<form method="post">
+		<p>
+			<label hidden="true">Fullname: </label>
+			<input hidden="true" required type="text" name="fullname" size="50" placeholder="Enter full name" maxlength="50" pattern="[a-z0-9A-Z ]{5,50}" id="fullname_form">
+		</p>
+		<p>
+			<label hidden="true">Email: </label>
+			<input hidden="true" required type="email" name="email" size="50" placeholder="Enter email" id="email_form">
+		</p>
+		<p>
+			<label hidden="true">Age: </label>
+			<input hidden="true" required type="number" name="age" size="50" placeholder="Enter age" id="age_form">
+		</p>
+		<button><a href="register.html">Back</a></button>
+		<button type="button" onclick="readData()">Read Data</a></button>
+	</form>
+
+	<script type="text/javascript">
+		function readData() {
+			fullname = localStorage.getItem('fullname_db')
+			email = localStorage.getItem('email_db')
+			age = localStorage.getItem('age_db')
+
+			console.log(fullname)
+			console.log(email)
+			console.log(age)
+
+			document.getElementById('fullname_form').value = fullname
+			document.getElementById('email_form').value = email
+			document.getElementById('age_form').value = age
+
+			document.write('Fullname: ' + fullname + '</br>')
+			document.write('Email: ' + email + '</br>')
+			document.write('Age: ' + age + '</br>')
+		}
+	</script>
+</body>
+</html>

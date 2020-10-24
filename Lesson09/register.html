@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>register</title>
+</head>
+<body>
+	<form method="post">
+		<p>
+			<label>Fullname: </label>
+			<input required type="text" name="fullname" size="50" placeholder="Enter full name" maxlength="50" pattern="[a-z0-9A-Z ]{5,50}" id="fullname_form">
+		</p>
+		<p>
+			<label>Email: </label>
+			<input required type="email" name="email" size="50" placeholder="Enter email" id="email_form">
+		</p>
+		<p>
+			<label>Age: </label>
+			<input required type="number" name="age" size="50" placeholder="Enter age" id="age_form">
+		</p>
+		<button onclick="saveData()">Sign up</button>
+		<button type="button"><a href="show.html">Show Data</a></button>
+	</form>
+
+	<script type="text/javascript">
+		function saveData(){
+			fullname = document.getElementById('fullname_form').value
+			email = document.getElementById('email_form').value
+			age = document.getElementById('age_form').value
+
+			console.log(fullname)
+			console.log(email)
+			console.log(age)
+
+			localStorage.setItem('fullname_db', fullname)
+			localStorage.setItem('email_db', email)
+			localStorage.setItem('age_db', age)
+			return true;
+		}
+	</script>
+</body>
+</html>

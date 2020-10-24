@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Purchase Order Form</title>
+	<style type="text/css">
+		.panel-heading{
+			font-size: larger; 
+			background-color: #ebbfbc;
+			border: solid red 1px;
+			width: 250px;
+			font-weight: bold; 
+			padding: 10px;
+		}
+
+		.panel-body{
+			padding-top: 5px;
+			padding-left: 5px;
+			color: #373ae6;
+			font-weight: bold;
+		}
+
+		.form-group{
+			background-color: #ebbfbc;
+			border: #5fe6f5 1px;
+			border-spacing: 5;
+			color: black;
+			font-weight: normal;
+			padding: 5px;
+		}
+	</style>
+</head>
+<body>
+		<div class="panel-heading">Loan Application Form</div>
+		<br>
+		<fieldset style="border-color: brown">
+			<legend class="panel-body">Applicant's Personal Information</legend>
+			<div class="form-group">
+				<table>
+					<tr>
+						<td>Fullname:</td>
+						<td>
+							<input type="text" name="name" id="fname" required="true">
+						</td>
+					</tr>
+					<tr>
+						<td>Date of Birth (mm/dd/yyyy):</td>
+						<td><input type="date" name="dob" id="dob" required="true"></td>
+					</tr>
+					<tr>
+						<td>Phone Number:</td>
+						<td><input type="tel" name="phoneno" id="phoneno" required="true" minlength="10"></td>
+					</tr>
+					<tr>
+						<td>Address:</td>
+						<td><input type="text" name="add" id="add" required="true"></td>
+					</tr>
+					<tr>
+						<td>ZIP Code:</td>
+						<td><input type="text" name="zip" id="zip" required="true" onchange="onchange1()" placeholder="XXX-XXXX-XXX"></td>
+					</tr>
+				</table>
+			</div>
+
+		</fieldset>
+		<br>
+		<fieldset style="border-color: brown">
+			<legend class="panel-body">Applicant's Employment Information</legend>
+			<div class="form-group">
+				<table>
+					<tr>
+						<td>Current Employer:</td>
+						<td><input type="text" name="employer" id="employer"required="true"></td>
+					</tr>
+					<tr>
+						<td>Employer Address:</td>
+						<td><input type="text" name="emadd" id="emadd" required="true"></td>
+					</tr>
+					<tr>
+						<td>Date of Joining (mm/dd/yyyy):</td>
+						<td><input type="date" name="doj" id="doj" required="true"></td>
+					</tr>
+					<tr>
+						<td>Phone Number:</td>
+						<td><input type="tel" name="emphoneno" id="emphoneno" required="true" minlength="10"></td>
+					</tr>
+					<tr>	
+						<td>Email ID:</td>
+						<td><input type="email" name="email" id="email" required="true"></td>
+					</tr>
+					<tr>	
+						<td>Fax:</td>	
+						<td><input type="number" name="fax" id="fax" required="true"placeholder="XXX-XXXXXXX"></td>
+					</tr>
+					<tr>
+						<td>Designation:</td>
+						<td><input type="text" name="designation" id="designation" required="true"></td>
+					</tr>
+					<tr>
+						<td>Annual Income:</td>
+						<td><input type="number" name="income" id="income" required="true"></td>
+					</tr>
+				</table>
+			</div>
+		</fieldset>
+		<br>
+		<fieldset style="border-color: brown">
+			<legend class="panel-body">Loans Information</legend>
+			<div class="form-group">
+				<table>
+					<tr>
+						<td>Loan Type:</td>
+						<td><select id="loantype" required="true">
+							<option>--Select--</option>
+							<option>Personal Loan</option>
+							<option>Home Loan</option>
+							<option>Vehicle Loan</option>
+							<option>Business Loan</option>
+							<option>Education Loan</option>
+						</select></td>
+					</tr>
+					<tr>
+						<td>Principal($):</td>
+						<td><input type="number" name="principal" id="principal" required="true"></td>
+					</tr>
+					<tr>
+						<td>Period (Months):</td>
+						<td><input type="number" name="period" id="period" required="true"></td>
+					</tr>
+					<tr>
+						<td>Interest (%):</td>
+						<td><input type="number" name="interest" id="interest" required="true"></td>
+					</tr>
+				</table>
+				<button type="button">Submit</button>	
+				<button>Reset</button>
+			</div>
+		</fieldset>
+</body>
+</html>

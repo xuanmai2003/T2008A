@@ -9,17 +9,13 @@
 		<tr ><td>
 			<label>Product Name></label>
 			<br>
+			<input type="number" name="index" id="index" value="" hidden="true">
 			<input type="text" name="product" id="product" style="background-color: #f5dec1; width: 700px">
 			<br>
 			<label>Manufacturer Name</label>
 			<br>
-			<select id="mname" onchange="selectmanuf">
-				<option value="">-- Manufacturer --</option>
-				<option value="Apple">Apple</option>
-				<option value="Samsung">Samsung</option>
-				<option value="LG">LG</option>
-				<option value="Sony">Sony</option>
-				<option value="Google">Google</option>
+			<select id="mname" onchange="changemanuf()">
+				<option>-- Manufacturer --</option>
 			</select>
 			<br>
 			<label>Category Name</label>
@@ -32,14 +28,15 @@
 			<br>
 			<label>Quantity</label>
 			<br>
-			<input type="text" name="quantity" style=" width: 700px" id="quantity">
+			<input type="text" name="quantity" style=" width: 700px" id="quantity" onkeyup="updateTotalPrice()">
 			<br>
 			<label>Total Price</label>
 			<br>
 			<input type="text" name="product" id="totalprice" style="background-color: #ccc8be; width: 700px">
 			<br>
-			<button type="button">Add Product</button>	
-			<button>Reset</button>
+			<button class="btn btn-success" type="button" onclick="addPro()">Add Product</button>
+			<button class="btn btn-danger" type="reset" onclick="reset()">Reset</button>
+			<button onclick="saveData()">Save</button>
 		</td></tr>
 	</table>
 	<br>
@@ -57,84 +54,169 @@
 				<th>Quantity</th>
 			</tr>
 			</thead>
-			<tbody id="productlist">
+			<tbody id="result">
 			</tbody>
 		</table>
 		</td></tr>
 	</table>
 
 	<script type="text/javascript">
-		function selectmanuf(){
-			var manuf = document.getElementById('mname').value
-			if(manuf = 'Apple'){
-				var manu1=document.getElementById('category');
-                        manu1.innerHTML=`
-                        <option>--Select--</option>
-                        <option>Iphone X</option>
-                        <option>Ipad</option>
-                        <option>Ipad Pro</option>
-                        `
-			}else if(manuf = 'Samsung'){
-				var manu2=document.getElementById('category');
-                        manu2.innerHTML=`
-                        <option>--Select--</option>
-                        <option>Samsung Galaxy</option>
-                        <option>Samsung Note</option>
-                        <option>Samsung Galaxy Watch</option>
-                        `
-			}
-			else if(manuf = 'LG'){
-				var manu3=document.getElementById('category');
-                        manu3.innerHTML=`
-                        <option>--Select--</option>
-                        <option>Television</option>
-                        <option>Laptop</option>
-                        <option>Fridge</option>
-                        `
-			}
-			else if(manuf = 'Sony'){
-				var manu4=document.getElementById('category');
-                        manu4.innerHTML=`
-                        <option>--Select--</option>
-                        <option>Television</option>
-                        <option>Playstation</option>
-                        <option>Camera</option>
-                        `
-			} else {
-				var manu5=document.getElementById('category');
-                        manu5.innerHTML=`
-                        <option>--Select--</option>
-                        <option>Pixel</option>
-                        <option>Stadia</option>
-                        <option>Nest</option>
-                        `
-			}
+		var manufactureList = {
+			"Apple": [
+				"IPhone", "IPad", "IPod"
+			],
+			"Samsung": [
+				"Galaxy S5", "Galaxy 10"
+			],
+			"LG": [
+				"Television", "Laptop", "Fridge"
+			],
+			"Sony": [
+				"Television", "Playstation", "Camera"
+			],
+			"Google": [
+				"Pixel", "Stadia", "Nest"
+			]
 		}
 
-		function updateTotalPrice(){
-			var quantity = document.getElementById('quantity').value
+		var productList = []
+
+		var manuafaturerTag = document.getElementById('mname')
+		for(var key in manufactureList) {
+			manuafaturerTag.innerHTML += `<option value='${key}'>${key}</option>`
+		}
+
+		function changemanuf() {
+			key = manuafaturerTag.value
+			categoryList = manufactureList[key]
+			console.log(categoryList)
+
+			var categoryTag = document.getElementById('category')
+			categoryTag.innerHTML = ''
+
+			if(categoryList != null) {
+				for (var i = 0; i < categoryList.length; i++) {
+					categoryTag.innerHTML += `<option value='${categoryList[i]}'>${categoryList[i]}</option>`
+				}
+			}
+		}
+		
+		function updateTotalPrice() {
 			var price = document.getElementById('price').value
-			totalprice = quantity*price
+			var quantity = document.getElementById('quantity').value
+			totalprice = price * quantity
 			document.getElementById('totalprice').value = totalprice
 		}
 
 		var count = 0;
 
 		function addPro() {
-			var product = document.getElementById('product').value
-			var manufacturer = document.getElementById('mname').value
-			var category = document.getElementById('category').value
+			var index = document.getElementById('index').value
+			var productName = document.getElementById('product').value
+			var manufactureName = document.getElementById('mname').value
+			var categoryName = document.getElementById('category').value
 			var price = document.getElementById('price').value
 			var quantity = document.getElementById('quantity').value
-			var totalprice = document.getElementById('totalprice').value
+			var totalPrice = document.getElementById('totalprice').value
 
-			var dataTag = document.getElementById('productlist')
-			dataTag.innerHTML += `
-				<tr>
-					<td>${++count}</td>
-					<td>${fullname}</td>
-					<td>${address}</td>
-				</tr>`
+			var product = {
+				'productName': productName,
+				'manufactureName': manufactureName,
+				'categoryName': categoryName,
+				'price': price,
+				'quantity': quantity,
+				'totalPrice': totalPrice
+			}
+
+			if(index != '') {
+				productList[index] = product
+				showProduct()
+				return;
+			}
+
+			productList.push(product)
+
+			document.getElementById('result').innerHTML += `<tr>
+						<td>${++count}</td>
+						<td>${productName}</td>
+						<td>${manufactureName}</td>
+						<td>${categoryName}</td>
+						<td>${price}</td>
+						<td>${quantity}</td>
+						<td>${totalPrice}</td>
+						<td><button class="btn btn-warning" onclick="editProduct(${count - 1})">Edit</button></td>
+						<td><button class="btn btn-danger" onclick="deleteProduct(${count - 1})">Delete</button></td>
+					</tr>`
+		}
+
+		function deleteProduct(index) {
+			console.log(index)
+			productList.splice(index, 1)
+			showProduct();
+		}
+
+		function showProduct() {
+			document.getElementById('result').innerHTML = ''
+
+			for (var i = 0; i < productList.length; i++) {
+				document.getElementById('result').innerHTML += `<tr>
+						<td>${i+1}</td>
+						<td>${productList[i].productName}</td>
+						<td>${productList[i].manufactureName}</td>
+						<td>${productList[i].categoryName}</td>
+						<td>${productList[i].price}</td>
+						<td>${productList[i].quantity}</td>
+						<td>${productList[i].totalPrice}</td>
+						<td><button class="btn btn-warning" onclick="editProduct(${i})">Edit</button></td>
+						<td><button class="btn btn-danger" onclick="deleteProduct(${i})">Delete</button></td>
+					</tr>`
+			}
+		}
+
+		function editProduct(index) {
+			var product = productList[index]
+			console.log(product)
+			document.getElementById('index').value = index
+			document.getElementById('product').value = product.productName
+			document.getElementById('mname').value = product.manufactureName
+			changemanuf()
+			document.getElementById('category').value = product.categoryName
+			document.getElementById('price').value = product.price
+			document.getElementById('quantity').value = product.quantity
+			document.getElementById('totalprice').value = product.totalPrice
+		}
+
+		function reset(){
+        	document.getElementById('product').value=''
+        	document.getElementById('mname').value='--Manufacturer--'
+        	document.getElementById('category').value=''
+        	document.getElementById('price').value=''
+        	document.getElementById('quantity').value=''
+        	document.getElementById('totalprice').value=''
+        }
+
+        function saveData() {
+			product=document.getElementById('product').value
+        	manufacturer=document.getElementById('mname').value
+        	category=document.getElementById('category').value
+        	price=document.getElementById('price').value
+        	quantity=document.getElementById('quantity').value
+        	totalprice=document.getElementById('totalprice').value
+
+			console.log(product)
+			console.log(manufacturer)
+			console.log(category)
+			console.log(price)
+			console.log(quantity)
+			console.log(totalprice)
+
+			localStorage.setItem('product', product)
+			localStorage.setItem('mname', manufacturer)
+			localStorage.setItem('category', category)
+			localStorage.setItem('quantity', quantity)
+			localStorage.setItem('totalprice', totalprice)
+
+			return true;
 		}
 	</script>
 </body>
