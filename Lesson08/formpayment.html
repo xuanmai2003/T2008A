@@ -133,13 +133,6 @@
 			document.getElementById('totalprice').value = totalprice
 		}
 
-		function quantityno() {
-            if(isNaN(document.getElementById('quantity').value)=true){
-                alert('Enter Number Only!')
-                document.getElementById('quantity').value=''
-            }
-        }
-
         function submit(){
         	 if(document.getElementById('product').value!='--Select--' && document.getElementById('price').value!='' && document.getElementById('quantity').value!='' && document.getElementById('totalprice').value!='' && document.getElementById('fname').value!='' && document.getElementById('address').value!='' && document.getElementById('card').value!='--Select--' && document.getElementById('cardnumber1').value!='' && document.getElementById('cardnumber2').value!='' && document.getElementById('cardnumber3').value!='' && document.getElementById('cardnumber4').value!=''){
                 alert('Your form has been submitted successfully!')
