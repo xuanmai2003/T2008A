@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Mua Hàng</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.panel{
+			border: solid grey 1px; background-color: white; width:1060px;
+		}
+
+		.panel-heading{
+			background-color: #babbf5; font-size: x-large; border: solid grey 1px; width: 250px; color:blue; font-weight: bold; padding: 10px; margin-top: 10px; margin-left: 10px;
+		}
+
+		.panel-body{
+			padding-left: 10px; padding-top: 5px; color: #373ae6; font-weight: bold;
+		}
+
+		.form-group{
+			color: black; font-weight: normal; padding: 5px
+		}
+
+		.header{
+			color: white;
+		}
+
+		body{
+			background-color: black
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<img src="https://i.pinimg.com/originals/6a/5b/dd/6a5bddcc012dbd7ca4b616fb4b128b9c.jpg" width="80" height="80">
+		<div style="margin-top: -9%; margin-left: 8%">
+			<h2>CASSEY CD</h2> 
+			<small>SHOP ĐĨA GỐC</small>
+		</div>
+		<hr>
+		<table style="width: 1000px">
+			<tr>
+				<th><a href="assignment.html">TRANG CHỦ</a></th>
+				<th style="padding-left: 5%"><a href="intro.html">GIỚI THIỆU</a></th>
+				<th style="padding-left: 5%"><a href="payment.html">ĐẶT HÀNG</a></th>
+				<th style="padding-left: 5%"><a href="contact.html">LIÊN HỆ</a></th>
+			</tr>
+		</table>
+		<img src="https://blog.teufelaudio.com/wp-content/uploads/2017/06/Teufel-Blog-CD-reinigen-Titelbild.jpg" width="1061" height="300">
+	</div>
+	<div class="panel">
+		<div class="panel-heading">Form Mua Hàng</div>
+		<div class="panel-body">
+			Thông tin sản phẩm
+			<div class="form-group">
+				<table border="1" cellspacing="2" cellpadding="3" style="border-color: blue">
+					<tr>
+						<td>Sản phẩm:</td>
+						<td><select id="product" onchange ="enable1()" required="true" >
+							<option>--Select--</option>
+							<option>Pink Tape</option>
+							<option>Empathy</option>
+							<option>Wonder</option>
+							<option>Brol</option>
+							<option>Red Light</option>
+							<option>Resonance</option>
+							<option>Handwritten</option>
+							<option>Lion Heart</option>
+						</select></td>
+					</tr>
+					<tr>
+						<td>Giá tiền($):</td>
+						<td><input type="number" name="price" id="price" onfocus="onfocus()" onkeyup="updateTotalPrice()" required="true" disabled="true"></td>
+					</tr>
+					<tr>
+						<td>Số lượng:</td>
+						<td><input type="number" name="quantity" id="quantity" onfocus="onfocus()" onkeyup="updateTotalPrice()" onkeypress="quantityno()" required="true" disabled="true"></td>
+					</tr>
+					<tr>
+						<td>Tổng số tiền($):</td>
+						<td><input type="number" name="totalprice" id="totalprice" onfocus="onfocus()" disabled="true" required="true"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<br>
+		<div class="panel-body">
+			Thông tin vận chuyển hàng
+			<div class="form-group">
+				<table border="1" cellspacing="2" cellpadding="3" style="border-color: blue">
+					<tr>
+						<td>Họ và tên:</td>
+						<td><input type="text" name="name" id="fname" onfocus="onfocus()" required="true"></td>
+					</tr>
+					<tr>
+						<td>Địa chỉ:</td>
+						<td><input type="text" name="address" id="address" onfocus="onfocus()" required="true"></td>
+					</tr>
+					<tr>
+						<td>Thẻ tín dụng:</td>
+						<td><select id="card" onchange="enable2()" required="true">
+							<option>--Select--</option>
+							<option>VISA</option>
+							<option>Master Card</option>
+							<option>American Express</option>
+						</select></td>
+					</tr>
+					<tr>
+						<td>Số thẻ tín dụng:</td>
+						<td>
+							<input type="number" name="cardnumber" id="cardnumber1" onfocus="onfocus()" size="5" maxlength="4" required="true" disabled="true" onkeypress="cardno1()">
+							<input type="number" name="cardnumber" id="cardnumber2" onfocus="onfocus()" size="5" maxlength="4" required="true" disabled="true" onkeypress="cardno2()">
+							<input type="number" name="cardnumber" id="cardnumber3" onfocus="onfocus()" size="5" maxlength="4" required="true" disabled="true" onkeypress="cardno3()">
+							<input type="number" name="cardnumber" id="cardnumber4" onfocus="onfocus()" size="5" maxlength="4" required="true" disabled="true" onkeypress="cardno4()">
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div style="padding-left: 10px ">
+			<input type="button" name="submit" value="Submit" onclick="submit()">
+			<input type="button" name="reset" value="Reset" onclick="reset()">
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		function enable1(){
+			var product=document.getElementById('product').value;
+			if(product = 'Pink Tape'){
+				document.getElementById('price').value=10000
+                document.getElementById('quantity').disabled=false
+			} else if (product = 'Empathy'){
+				document.getElementById('price').value=10000
+                document.getElementById('quantity').disabled=false
+			} else if (product = 'Wonder'){
+				document.getElementById('price').value=10000
+                document.getElementById('quantity').disabled=false
+			}else if (product = 'Brol'){
+				document.getElementById('price').value=10000
+                document.getElementById('quantity').disabled=false
+			}else if (product = 'Red Light'){
+				document.getElementById('price').value=10000
+                document.getElementById('quantity').disabled=false
+			}else if (product = 'Resonance'){
+				document.getElementById('price').value=10000
+                document.getElementById('quantity').disabled=false
+			}else if (product = 'Wonder'){
+				document.getElementById('price').value=10000
+                document.getElementById('quantity').disabled=false
+			}else if (product = 'Lion Heart'){
+				document.getElementById('price').value=10000
+                document.getElementById('quantity').disabled=false
+			}
+		}
+
+		function enable2(){
+			var card=document.getElementById('card').value
+			if (card != '--Select--'){
+				document.getElementById('cardnumber1').disabled=false
+				document.getElementById('cardnumber2').disabled=false
+				document.getElementById('cardnumber3').disabled=false
+				document.getElementById('cardnumber4').disabled=false
+			}
+		}
+
+		function updateTotalPrice() {
+			var price = document.getElementById('price').value
+			var quantity = document.getElementById('quantity').value
+			totalprice = price * quantity
+			document.getElementById('totalprice').value = totalprice
+		}
+
+        function submit(){
+        	 if(document.getElementById('product').value!='--Select--' && document.getElementById('price').value!='' && document.getElementById('quantity').value!='' && document.getElementById('totalprice').value!='' && document.getElementById('fname').value!='' && document.getElementById('address').value!='' && document.getElementById('card').value!='--Select--' && document.getElementById('cardnumber1').value!='' && document.getElementById('cardnumber2').value!='' && document.getElementById('cardnumber3').value!='' && document.getElementById('cardnumber4').value!=''){
+                alert('Your form has been submitted successfully!')
+            }
+            else{
+                alert('Xin hãy điền đầy đủ thông tin!')
+            }
+        }
+
+        function reset(){
+        	document.getElementById('product').value='--Select--'
+        	document.getElementById('price').value=''
+        	document.getElementById('quantity').value=''
+        	document.getElementById('quantity').disabled=true
+        	document.getElementById('totalprice').value=''
+        	document.getElementById('fname').value=''
+        	document.getElementById('address').value=''
+        	document.getElementById('card').value='--Select--'
+        	document.getElementById('cardnumber1').value=''
+        	document.getElementById('cardnumber2').value=''
+        	document.getElementById('cardnumber3').value=''
+        	document.getElementById('cardnumber4').value=''
+        	document.getElementById('cardnumber1').disabled=true
+        	document.getElementById('cardnumber2').disabled=true
+        	document.getElementById('cardnumber3').disabled=true
+        	document.getElementById('cardnumber4').disabled=true
+        }
+	</script>
+</body>
+</html>
