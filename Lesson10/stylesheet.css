@@ -1,0 +1,37 @@
+body{
+	background-color: #fadef7
+}
+
+.header{
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer{
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 2%
+}
+
+.intro{
+	border: solid black 1px;
+	background-color: white;
+	font-size: larger;
+	font-family: Arial, Helvetica, sans-serif;
+	width: 996px;
+	padding: 3%
+}
+
+.panel{
+	border: solid grey 1px; background-color: white; width:1060px;
+}
+
+.panel-heading{
+	background-color: #babbf5; font-size: x-large; border: solid grey 1px; width: 250px; color:blue; font-weight: bold; padding: 10px; margin-top: 10px; margin-left: 10px;
+}
+
+.panel-body{
+	padding-left: 10%; padding-top: 5px; color: #373ae6; font-weight: bold;
+}
+
+.form-group{
+	color: black; font-weight: normal; padding: 5px
+}
