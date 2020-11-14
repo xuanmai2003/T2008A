@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Giai phuong trinh bac 1</title>
+</head>
+<body>
+	<div class="container" style="border: solid 1px blue;">
+		<div class="row" style="background-color: blue; color: white; padding: 1%">
+			Giai phuong trinh bac 1
+		</div>
+		<div style="padding: 2%">
+			<button id="A">Nhap gia tri A</button>
+			<button id="B">Nhap gia tri B</button>
+			<button id="result">In ket qua</button>
+		</div>
+	</div>
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+		$(function() {
+			$('button').css('background-color', 'green')
+			$('button').css('color', 'white')
+
+			$('#A').click(function() {
+				a=prompt('Nhap gia tri A')
+			})
+			$('#B').click(function() {
+				b=prompt('Nhap gia tri B')
+			})
+			$('#result').click(function() {
+				if (a==0){
+					if (b==0){
+						alert("pt vo so nghiem");
+					} else {
+						alert("pt vo nghiem");
+					}
+				}else{
+					alert("Nghiem x =" + -b/a);	
+				}
+			})
+		})
+	</script>
+</body>
+</html>

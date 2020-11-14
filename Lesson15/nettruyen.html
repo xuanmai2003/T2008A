@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nettruyen</title>
+	<style type="text/css">
+		html {box-sizing: border-box;}
+*, *:before, *:after {box-sizing: inherit;}
+
+img {
+  width: 100%;
+  height: auto;
+	padding: 5px;
+}
+
+h2 {
+  text-align:center;
+	padding-bottom: 1em;
+}
+
+.slick-dots {
+	text-align: center;
+  margin: 0 0 10px 0;
+  padding: 0;
+  li {
+    display:inline-block;
+    margin-left: 4px;
+    margin-right: 4px;
+    &.slick-active {
+      button {
+        background-color:black;
+      }
+    }
+    button {
+      font: 0/0 a;
+      text-shadow: none;
+      color: transparent;
+      background-color:#999;
+      border:none;
+      width: 15px;
+      height: 15px;
+      border-radius:50%;
+    }
+		:hover{
+			background-color: black;
+		}
+  }
+}
+
+/* Custom Arrow */
+.prev{
+	color: #999;
+	position: absolute;
+	top: 38%;
+	left: -2em;
+	font-size: 1.5em;
+		:hover{
+			cursor: pointer;
+			color: black;
+		}
+}
+.next{
+	color: #999;
+	position: absolute;
+	top: 38%;
+	right: -2em;
+	font-size: 1.5em;
+	:hover{
+			cursor: pointer;
+			color: black;
+		}
+}
+
+@media screen and (max-width: 800px) {
+    .next {
+        display: none !important;
+    }
+}
+	</style>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm" id="top" style="background-color: purple;">
+		<ul class="navbar-nav" style="margin-left: 5%">
+			<li class="nav-item">
+				<img src="http://st.truyenchon.com/data/logos/logo-nettruyen.png">
+			</li>
+			<li class="nav-item" style="padding-left: 100px">
+				<input type="text" name="searchbar" placeholder="Tim truyen..." size="30">
+				<button class="btn" type="submit"><i class="fas fa-search"></i></button>
+			</li>
+		  	<li class="nav-item">
+		  		<a href="#"><i class="fas fa-comment fa-lg" style="color:white; margin-left: 30px; margin-top: 9px"></i></a>
+		  	</li>
+		  	<li class="nav-item" style="margin-left: 100px">
+		  		<a href="#">Dang nhap</a>
+		  	</li>
+		  	<li class="nav-item">
+		  		<a href="#">Dang ki</a>
+		  	</li>
+		</ul>
+	</nav>
+	<nav class="navbar navbar-expand-sm" style="background-color: #cfcdca">
+	  	<ul class="navbar-nav" style="margin-left: 10%">
+		    <li class="nav-item active">
+		      	<a class="nav-link active" href="#"><i class="fas fa-home"></i></a>
+		    </li>
+		    <li class="nav-item">
+		      	<a class="nav-link" href="#">Hot</a>
+		    </li>
+		    <li class="nav-item">
+		      	<a class="nav-link" href="#">Theo doi</a>
+		    </li>
+		    <li class="nav-item">
+		      	<a class="nav-link" href="#">Lich su</a>
+		    </li>
+		    <li class="nav-item dropdown">
+		      	<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">The loai</a>
+		      	<div class="dropdown-menu" style="color: red">
+			        <a class="dropdown-item" href="#">Tat ca</a>
+			        <a class="dropdown-item" href="#">Co dai</a>
+			        <a class="dropdown-item" href="#">Dam my</a>
+			        <a class="dropdown-item" href="#">Manhua</a>
+			        <a class="dropdown-item" href="#">Ngon tinh</a>
+			        <a class="dropdown-item" href="#">Xuyen khong</a>
+			    </div>
+		    </li>
+		    <li class="nav-item">
+		      	<a class="nav-link" href="#">Xep hang</a>
+		    </li>
+		    <li class="nav-item">
+		      	<a class="nav-link" href="#">Tim truyen</a>
+		    </li>
+		    <li class="nav-item">
+		      	<a class="nav-link" href="#">Con gai</a>
+		    </li>
+		    <li class="nav-item">
+		      	<a class="nav-link" href="#">Con trai</a>
+		    </li>
+	  	</ul>
+	</nav>
+	<div style="background-color: #e3e3e3">
+		<div class="container bg-light">
+			<div>
+				<h3 style="color: blue">TRUYEN DE CU ></h3>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-2">
+							<img src="http://st.truyenchon.com/data/comics/163/toi-viet-sach-de-thang-cap.jpg" width="150" height="200">
+							<p>Toi viet sach de thang</p>
+						</div>
+						<div class="col-md-2" style="margin-left: 30px">
+							<img src="http://st.truyenchon.com/data/comics/163/toi-viet-sach-de-thang-cap.jpg" width="150" height="200">
+							<p>Toi viet sach de thang</p>
+						</div>
+						<div class="col-md-2" style="margin-left: 30px">
+							<img src="http://st.truyenchon.com/data/comics/163/toi-viet-sach-de-thang-cap.jpg" width="150" height="200">
+							<p>Toi viet sach de thang</p>
+						</div>
+						<div class="col-md-2" style="margin-left: 30px">
+							<img src="http://st.truyenchon.com/data/comics/163/toi-viet-sach-de-thang-cap.jpg" width="150" height="200">
+							<p>Toi viet sach de thang</p>
+						</div>
+						<div class="col-md-2" style="margin-left: 30px">
+							<img src="http://st.truyenchon.com/data/comics/163/toi-viet-sach-de-thang-cap.jpg" width="150" height="200">
+							<p>Toi viet sach de thang</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<h3 style="color: blue">TRUYEN MOI CAP NHAT ></h3>
+				<div class="row">
+					<div class="col-md-8">
+						<div class="row" id="danhsach">
+							<div class="col-md-3">
+								<img src="http://st.truyenchon.com/data/comics/53/lan-dau-voi-gal.jpg" style="width: 130px; height: 170px">
+								Lan dau voi Gal
+								<div class="row">
+									<div class="col-md-6">
+										<small>Chapter 79<br>Chapter 79<br>Chapter 79</small>
+									</div>
+									<div class="col-md-6 text-right">
+										<small>17 phut truoc<br>17 phut truoc<br>17 phut truoc</small>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<img src="http://st.truyenchon.com/data/comics/53/lan-dau-voi-gal.jpg" style="width: 130px; height: 170px">
+								Lan dau voi Gal
+								<div class="row">
+									<div class="col-md-6">
+										<small>Chapter 79<br>Chapter 79<br>Chapter 79</small>
+									</div>
+									<div class="col-md-6 text-right">
+										<small>17 phut truoc<br>17 phut truoc<br>17 phut truoc</small>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<img src="http://st.truyenchon.com/data/comics/53/lan-dau-voi-gal.jpg" style="width: 130px; height: 170px">
+								Lan dau voi Gal
+								<div class="row">
+									<div class="col-md-6">
+										<small>Chapter 79<br>Chapter 79<br>Chapter 79</small>
+									</div>
+									<div class="col-md-6 text-right">
+										<small>17 phut truoc<br>17 phut truoc<br>17 phut truoc</small>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<img src="http://st.truyenchon.com/data/comics/53/lan-dau-voi-gal.jpg" style="width: 130px; height: 170px">
+								Lan dau voi Gal
+								<div class="row">
+									<div class="col-md-6">
+										<small>Chapter 79<br>Chapter 79<br>Chapter 79</small>
+									</div>
+									<div class="col-md-6 text-right">
+										<small>17 phut truoc<br>17 phut truoc<br>17 phut truoc</small>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<img src="http://st.truyenchon.com/data/comics/53/lan-dau-voi-gal.jpg" style="width: 130px; height: 170px">
+								Lan dau voi Gal
+								<div class="row">
+									<div class="col-md-6">
+										<small>Chapter 79<br>Chapter 79<br>Chapter 79</small>
+									</div>
+									<div class="col-md-6 text-right">
+										<small>17 phut truoc<br>17 phut truoc<br>17 phut truoc</small>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<img src="http://st.truyenchon.com/data/comics/53/lan-dau-voi-gal.jpg" style="width: 130px; height: 170px">
+								Lan dau voi Gal
+								<div class="row">
+									<div class="col-md-6">
+										<small>Chapter 79<br>Chapter 79<br>Chapter 79</small>
+									</div>
+									<div class="col-md-6 text-right">
+										<small>17 phut truoc<br>17 phut truoc<br>17 phut truoc</small>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<img src="http://st.truyenchon.com/data/comics/53/lan-dau-voi-gal.jpg" style="width: 130px; height: 170px">
+								Lan dau voi Gal
+								<div class="row">
+									<div class="col-md-6">
+										<small>Chapter 79<br>Chapter 79<br>Chapter 79</small>
+									</div>
+									<div class="col-md-6 text-right">
+										<small>17 phut truoc<br>17 phut truoc<br>17 phut truoc</small>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<img src="http://st.truyenchon.com/data/comics/53/lan-dau-voi-gal.jpg" style="width: 130px; height: 170px">
+								Lan dau voi Gal
+								<div class="row">
+									<div class="col-md-6">
+										<small>Chapter 79<br>Chapter 79<br>Chapter 79</small>
+									</div>
+									<div class="col-md-6 text-right">
+										<small>17 phut truoc<br>17 phut truoc<br>17 phut truoc</small>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<img src="http://st.truyenchon.com/data/comics/53/lan-dau-voi-gal.jpg" style="width: 130px; height: 170px">
+								Lan dau voi Gal
+								<div class="row">
+									<div class="col-md-6">
+										<small>Chapter 79<br>Chapter 79<br>Chapter 79</small>
+									</div>
+									<div class="col-md-6 text-right">
+										<small>17 phut truoc<br>17 phut truoc<br>17 phut truoc</small>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<img src="http://st.truyenchon.com/data/comics/53/lan-dau-voi-gal.jpg" style="width: 130px; height: 170px">
+								Lan dau voi Gal
+								<div class="row">
+									<div class="col-md-6">
+										<small>Chapter 79<br>Chapter 79<br>Chapter 79</small>
+									</div>
+									<div class="col-md-6 text-right">
+										<small>17 phut truoc<br>17 phut truoc<br>17 phut truoc</small>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<img src="http://st.truyenchon.com/data/comics/53/lan-dau-voi-gal.jpg" style="width: 130px; height: 170px">
+								Lan dau voi Gal
+								<div class="row">
+									<div class="col-md-6">
+										<small>Chapter 79<br>Chapter 79<br>Chapter 79</small>
+									</div>
+									<div class="col-md-6 text-right">
+										<small>17 phut truoc<br>17 phut truoc<br>17 phut truoc</small>
+									</div>
+								</div>
+							</div>
+							<ul class="pagination" style="margin-left: 15%; margin-top: 5%">
+							  	<li class="page-item  active"><a class="page-link" href="#">1</a></li>
+							  	<li class="page-item"><a class="page-link" href="#">2</a></li>
+							  	<li class="page-item"><a class="page-link" href="#">3</a></li>
+							  	<li class="page-item"><a class="page-link" href="#">4</a></li>
+							  	<li class="page-item"><a class="page-link" href="#">5</a></li>
+							  	<li class="page-item"><a class="page-link" href="#">6</a></li>
+							  	<li class="page-item"><a class="page-link" href="#">7</a></li>
+							  	<li class="page-item"><a class="page-link" href="#">></a></li>
+							  	<li class="page-item"><a class="page-link" href="#">>></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card">
+							<div class="card-header bg-light" style=" background-color: #e3e3e3">
+								<ul class="nav">
+								  	<li class="nav-item" style="margin-left: -20px">
+								    	<a class="nav-link" href="#">Top Thang</a>
+								  	</li>
+								  	<li class="nav-item" style="margin-left: -10px">
+								    	<a class="nav-link" href="#">Top Tuan</a>
+								  	</li>
+								  	<li class="nav-item" style="margin-left: -10px; margin-right: -20px">
+								    	<a class="nav-link" href="#">Top Ngay</a>
+								  	</li>
+								</ul>
+							</div>
+							<div class="card-body">
+								<ul class="nav">
+									<li class="nav-item">
+										<h3 style="color: blue">01</h3>
+									</li>
+									<li class="nav-item">
+										<img src="http://st.truyenchon.com/data/comics/199/co-vo-nho-nuong-chieu-qua-lai-thanh-ac.jpg" width="50" height="50" style="margin-left: 5px">
+									</li>
+									<li class="nav-item" style="margin-left: 5px; margin-right: -10px">
+										Co vo nho nuong chieu
+										<small><br>Chapter 207
+										<i class="far fa-eye"></i>8.345.654</small>
+									</li>
+								</ul>
+								<hr>
+								<ul class="nav">
+									<li class="nav-item">
+										<h3 style="color: green">02</h3>
+									</li>
+									<li class="nav-item">
+										<img src="http://st.truyenchon.com/data/comics/199/co-vo-nho-nuong-chieu-qua-lai-thanh-ac.jpg" width="50" height="50" style="margin-left: 5px">
+									</li>
+									<li class="nav-item" style="margin-left: 5px; margin-right: -10px">
+										Co vo nho nuong chieu
+										<small><br>Chapter 207
+										<i class="far fa-eye"></i>8.345.654</small>
+									</li>
+								</ul>
+								<hr>
+								<ul class="nav">
+									<li class="nav-item">
+										<h3 style="color: red">03</h3>
+									</li>
+									<li class="nav-item">
+										<img src="http://st.truyenchon.com/data/comics/199/co-vo-nho-nuong-chieu-qua-lai-thanh-ac.jpg" width="50" height="50" style="margin-left: 5px">
+									</li>
+									<li class="nav-item" style="margin-left: 5px; margin-right: -10px">
+										Co vo nho nuong chieu
+										<small><br>Chapter 207
+										<i class="far fa-eye"></i>8.345.654</small>
+									</li>
+								</ul>
+								<hr>
+								<ul class="nav">
+									<li class="nav-item">
+										<h3>04</h3>
+									</li>
+									<li class="nav-item">
+										<img src="http://st.truyenchon.com/data/comics/199/co-vo-nho-nuong-chieu-qua-lai-thanh-ac.jpg" width="50" height="50" style="margin-left: 5px">
+									</li>
+									<li class="nav-item" style="margin-left: 5px; margin-right: -10px">
+										Co vo nho nuong chieu
+										<small><br>Chapter 207
+										<i class="far fa-eye"></i>8.345.654</small>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="card" style="margin-top: 10%">
+							<div class="card-header" style="color: blue">
+								Binh luan moi
+							</div>
+							<div class="card-body">
+								Yeu gia vi vuong
+								<div class="row" style="margin-top: 2%">
+									<div class="col-md-3">
+										<img src="http://st.truyenchon.com/data/sites/1/useravatars/user304002-loladota2001.jpg" width="50" height="50">
+									</div>
+									<div class="col-md-9" style="margin-right: -10px">
+										<b style="color: blue">ABC</b>
+										<small style="margin-left: 60px"><i class="far fa-clock"></i>1 giay truoc</small>
+										<br>abcdeffghwetouhsdfjkvnsk
+									</div>
+								</div>
+								<hr>
+								Yeu gia vi vuong
+								<div class="row" style="margin-top: 2%">
+									<div class="col-md-3">
+										<img src="http://st.truyenchon.com/data/sites/1/useravatars/user304002-loladota2001.jpg" width="50" height="50">
+									</div>
+									<div class="col-md-9" style="margin-right: -10px">
+										<b style="color: blue">ABC</b>
+										<small style="margin-left: 60px"><i class="far fa-clock"></i>1 giay truoc</small>
+										<br>abcdeffghwetouhsdfjkvnsk
+									</div>
+								</div>
+								<hr>
+								Yeu gia vi vuong
+								<div class="row" style="margin-top: 2%">
+									<div class="col-md-3">
+										<img src="http://st.truyenchon.com/data/sites/1/useravatars/user304002-loladota2001.jpg" width="50" height="50">
+									</div>
+									<div class="col-md-9" style="margin-right: -10px">
+										<b style="color: blue">ABC</b>
+										<small style="margin-left: 60px"><i class="far fa-clock"></i>1 giay truoc</small>
+										<br>abcdeffghwetouhsdfjkvnsk
+									</div>
+								</div>
+								<hr>
+								Yeu gia vi vuong
+								<div class="row" style="margin-top: 2%">
+									<div class="col-md-3">
+										<img src="http://st.truyenchon.com/data/sites/1/useravatars/user304002-loladota2001.jpg" width="50" height="50">
+									</div>
+									<div class="col-md-9" style="margin-right: -10px">
+										<b style="color: blue">ABC</b>
+										<small style="margin-left: 60px"><i class="far fa-clock"></i>1 giay truoc</small>
+										<br>abcdeffghwetouhsdfjkvnsk
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<p style="margin-left: 5.5%; margin-top: 1%; padding-bottom: 2%">Truyen tranh Truyen tranh Truyen tranh online Truyen tranh online Doc truyen tranh Doc truyen tranh</p>
+	</div>
+	<div class="footer bg-dark" style="margin-top: -2%">
+		<div class="container">
+			<div class="row" style="padding-top: 2%">
+				<div class="col-md-4">
+					<img src="http://st.truyenchon.com/data/logos/logo-nettruyen.png"style="padding-bottom: 2%">
+					<div class="container bg-light" style="padding: 2%">
+						<div class="row">
+							<div class="col-md-3">
+								<img src="https://scontent.fhan2-5.fna.fbcdn.net/v/t1.0-1/cp0/p80x80/22528449_1856634004370937_5820400839758379699_n.jpg?_nc_cat=1&ccb=2&_nc_sid=dbb9e7&_nc_ohc=LUL3IboyFPEAX_NTZrn&_nc_ht=scontent.fhan2-5.fna&tp=27&oh=2a9b09d7bd158cc7c01f3c0d49e45400&oe=5FD20C89" width="50" height="50">
+							</div>
+							<div class="colpmd-9">
+								<a href="#">Nettruyen.com</a>
+								<br>
+								<button type="button">
+									Like button
+								</button>
+								129K likes
+							</div>
+						</div>
+					</div>
+					<p style="color: white">Copyright 2015 NetTruyen</p>
+				</div>
+				<div class="col-md-8" style="color: white">
+					The loai
+					<ul class="nav">
+						<li class="nav-item">
+							<p style="border: solid 1px white" href="#">Chuyen sinh</p>
+						</li>
+						<li class="nav-item" style="padding-left: 1%">
+							<p style="border: solid 1px white" href="#">Dam my</p>
+						</li>
+						<li class="nav-item" style="padding-left: 1%">
+							<p style="border: solid 1px white" href="#">Manga</p>
+						</li>
+						<li class="nav-item" style="padding-left: 1%">
+							<p style="border: solid 1px white" href="#">Manhua</p>
+						</li>
+						<li class="nav-item" style="padding-left: 1%">
+							<p style="border: solid 1px white" href="#">Manhwa</p>
+						</li>
+						<li class="nav-item" style="padding-left: 1%">
+							<p style="border: solid 1px white" href="#">Ngon tinh</p>
+						</li>
+						<li class="nav-item" style="padding-left: 1%">
+							<p style="border: solid 1px white" href="#">Romance</p>
+						</li>
+						<li class="nav-item" style="padding-left: 1%">
+							<p style="border: solid 1px white" href="#">Xuyen khong</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

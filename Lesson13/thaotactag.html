@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Ban Hang</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<body>
+	<ul class="navbar navbar-expand-sm bg-primary navbar-dark">
+	 	<li class="nav-item">
+	 		<form class="form-inline">
+	    		<input class="form-control mr-sm-2" type="text" placeholder="Nhap ma hang" style="width: 300px">
+	    	</form>
+	  	</li>
+	  	<li class="nav-item" style="margin-left: 150px">
+	  		<a class="nav-link disabled" href="#">Bao cao | Quan ly</a>
+		</li>
+		<li class="nav-item">
+			Cua Hang
+			<form method="post" style="margin-left: 120%; margin-top: -30%">
+				<select>
+					<option>Kho 1</option>
+					<option>Kho 2</option>
+					<option>Kho 3</option>
+				</select>
+			</form>
+		</li>
+		<li class="nav-item">
+			<img src="">
+		</li>
+		<li class="nav-item dropdown-menu">
+		  	<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+				Nguoi Dung
+			</button>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="#">Profile</a>
+				<a class="dropdown-item" href="#">Cai Dat</a>
+				<a class="dropdown-item" href="#">Dang Xuat</a>
+				</div>
+		</li>
+	</ul>
+	<div class="row" id="header">
+		<div class="col-md-5" style="margin-top: 2%">
+			<ul class="nav nav-tabs">
+				<li class="nav-item">
+					<a class="nav-link active" href="#">Hoa don 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Hoa don 2</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Hoa don 3</a>
+				</li>
+				<li class="nav-item" style="margin-top: 2%">
+					<button style="background-color: orange">+ Hoa Don</button>
+				</li>
+			</ul>
+			<table border="1" cellspacing="0" cellpadding="3">
+				<tr>
+					<td style="width: 170px">Hang Hoa</td>
+					<td style="width: 80px">SL</td>
+					<td style="width: 90px">Don Gia</td>
+					<td style="width: 40px">Thanh Tien</td>
+				</tr>
+				<tbody id="cardList"></tbody>
+			</table>
+		</div>
+		<div class="col-md-7">
+			<div class="row" id="product_items"></div>
+		</div> 
+	</div>
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+		var dataList = [
+			{	'thumbnail': 'https://product.hstatic.net/1000191320/product/rau-cai-chip_master.jpg',
+				'title': 'Rau Cai Chip',
+				'price': '5000'
+			}, {
+				'thumbnail': 'https://zenmart.vn/Resources/Zenmart/Product/2019/12/208/8934588063060-aquafina-chai-1-5l-637129002917586267.jpg',
+				'title': 'Aquafina',
+				'price': '10000'
+			}, {
+				'thumbnail': 'https://lh3.googleusercontent.com/proxy/3fg1nl8Yw_cFPwhawDm_64UIQjuxD03HvQbc2PKthaNMGA5iV1eUOfrmgGuGsmY9uuWyzGunxZ1BvEZoU8PGDhqcdRbT8c5ic6RSKYUy8EZHgNS9J5T2xOyrPR6NB-Taeynr4ETAo0vNuy0',
+				'title': 'Khan Mat',
+				'price': '25000'
+			}, {
+				'thumbnail': 'https://cdn.tgdd.vn/Products/Images/2563/85219/bhx/nuoc-khoang-la-vie-350ml-202002211354408249.JPG',
+				'title': 'La Vie',
+				'price': '5000'
+			},{
+				'thumbnail': 'https://product.hstatic.net/1000230347/product/but_chi_go_fo-gp02_-_01_13eff0f269944320ae505954a626efc1_large.jpg',
+				'title': 'But Chi',
+				'price': '5000'
+			}, {
+				'thumbnail': 'https://cf.shopee.vn/file/387dbcc99ba9db904be604233cad743c',
+				'title': 'Thuoc Ke',
+				'price': '10000'
+			},{
+				'thumbnail': 'https://www.tagiatrang.com/wp-content/uploads/2020/03/cai-ngot-1.jpg',
+				'title': 'Rau Cai Ngot',
+				'price': '5000'
+			}
+		]
+
+		cardItems = []
+
+		$(function() {
+			loadData()
+		})
+
+		function loadData() {
+			for (var i = 0; i < dataList.length; i++) {
+				$('#product_items').append(`<div class="col-md-3" onclick="clickItem(${i})" style="cursor: pointer">
+						<img src="${dataList[i].thumbnail}" width="100%">
+						<p style="text-align: center;">${dataList[i].title}</p>
+						<p style="text-align: center;">${dataList[i].price} VND</p>
+					</div>`)
+			}
+		}
+
+		function clickItem(index) {
+			if(cardItems[index] === undefined) {
+				cardItems[index] = {
+					'thumbnail': dataList[index].thumbnail,
+					'title': dataList[index].title,
+					'price': dataList[index].price,
+					'number': 1
+				}
+			} else {
+				cardItems[index].number++
+			}
+
+			console.log(cardItems)
+			$('#cardList').empty()
+			count = 0
+			for (var i = 0; i < cardItems.length; i++) {
+				p = cardItems[i]
+				if(p === undefined) continue;
+				$('#cardList').append(`<tr>
+							<td>${p.title}</td>
+							<td>${p.number}</td>
+							<td>${p.price}</td>
+							<td>${p.price * p.number}</td>
+						</tr>`)
+			}
+		}
+	</script>
+</body>
+</html>

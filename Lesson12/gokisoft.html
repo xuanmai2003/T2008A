@@ -17,41 +17,43 @@
 
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
 	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-	<div class="row" style="background-color: black; color: white">
-		<ul class="nav" style="padding-left: 3%">
+	<div class="row bg-dark" style="color: white">
+		<ul class="nav">
 		 	<li class="nav-item">
-		    	<a class="nav-link disabled" href="#"><i class="fas fa-user-alt"></i></a>
+		 		<a class="nav-link disabled" href="#"><img src="https://www.gravatar.com/avatar/d3d863d6f47708501814fb41e9c38f31.jpg?s=80&d=mm&r=g" width="35" height="35" style="border-radius: 50%"></a>
 		  	</li>
 		  	<li class="nav-item">
-				<a href="#" class="nav-link">Ghi Chú</a>
+				<a href="#" class="nav-link" style="color: white">Ghi Chú</a>
 			</li>
 		  	<li class="nav-item">
-				<a href="#" class="nav-link">Thiết Kế Web</a>
+				<a href="#" class="nav-link" style="color: white">Thiết Kế Web</a>
 			</li>
 			<li class="nav-item">
 				<a href="#" class="nav-link" style="color: yellow"> My CV</a>
 			</li>
 			<li class="nav-item">
-				<a href="#" class="nav-link"> My Class</a>
+				<a href="#" class="nav-link" style="color: white"> My Class</a>
 			</li>
 			<li class="nav-item">
-				<a href="#" class="nav-link"> Liên Hệ</a>
+				<a href="#" class="nav-link" style="color: white"> Liên Hệ</a>
 			</li>
 			<li class="nav-item">
-				<a href="#" class="nav-link"> Học Viên Tích Cực</a>
+				<a href="#" class="nav-link" style="color: white"> Học Viên Tích Cực</a>
 			</li>
 			<li class="nav-item">
-				<a href="#" class="nav-link">Thoát</a>
+				<a href="#" class="nav-link" style="color: white">Thoát</a>
 			</li>
-			<li class="nav-item">
+			<li class="nav-item" style="padding-left: 150px">
 				<a href="#" class="nav-link disabled">
-					<i class="fab fa-facebook-f"></i>
-					<i class="fab fa-twitter"></i>
-					<i class="fab fa-pinterest-p"></i>
-					<i class="fab fa-fab fa-vimeo-v"></i>
-					<i class="fab fa-youtube" style="color: red"></i>
+					<i class="fa fa-facebook fa-lg"></i>
+					<i class="fab fa-twitter fa-lg"></i>
+					<i class="fab fa-pinterest-p fa-lg"></i>
+					<i class="fab fa-fab fa-vimeo-v fa-lg"></i>
+					<i class="fab fa-youtube fa-lg" style="color: red"></i>
 				</a>
 			</li>
 		</ul>
@@ -60,104 +62,464 @@
 		<img src="https://res.cloudinary.com/ziczacgroup/image/upload/v1587623413/qhwncq3wtjkrsyke6ayw.png" width="180" height="80">
 		<img src="https://res.cloudinary.com/ziczacgroup/image/upload/v1600320406/tufegz0akqdcgj7e765r.png" style="margin-left: 10%">
 	</div>
-	<div class="row">
-		<ul class="nav" style="padding-left: 2%">
-		  	<li class="nav-item">
-				<a href="#" class="nav-link">Trang Chủ</a>
-			</li>
-		  	<li class="nav-item">
-				<a href="#" class="nav-link">Lập Trình C</a>
-			</li>
-			<li class="nav-item">
-				<a href="#" class="nav-link">Frontend</a>
-			</li>
-			<li class="nav-item">
-				<a href="#" class="nav-link">Backend</a>
-			</li>
-			<li class="nav-item">
-				<a href="#" class="nav-link">Java</a>
-			</li>
-			<li class="nav-item">
-				<a href="#" class="nav-link">Android</a>
-			</li>
-			<li class="nav-item">
-				<a href="#" class="nav-link">Tools</a>
-			</li>
-			<li class="nav-item">
-				<a href="#" class="nav-link disabled">Khác</a>
-			</li>
-		</ul>
-		<hr>
+	<div class="shadow p-4 mb-4 bg-white">
+		<div class="row">
+			<ul class="nav pl-2" >
+			  	<li class="nav-item">
+					<a href="#" class="nav-link" style="color: black">Trang Chủ</a>
+				</li>
+			  	<li class="nav-item">
+					<a href="#" class="nav-link" style="color: black">Lập Trình C</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link" style="color: black">Frontend</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link" style="color: black">Backend</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link" style="color: black">Java</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link" style="color: black">Android</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link" style="color: black">Tools</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link disabled" style="color: black">Khác</a>
+				</li>
+			</ul>
+		</div>
 	</div>
-	<div style="margin-left: 2%">
+	<div style="margin-left: 2%; padding-top: 1%">
 		Trang Chủ > Danh sách chủ đề học
-		<form class="form-inline" style="margin-left: 60%; margin-top: -3%">
+		<form class="form-inline" style="margin-left: 73%; margin-top: -3%">
 			<input class="form-control mr-sm-2" type="text" placeholder="Tìm kiếm">
     		<button class="btn btn-outline-warning my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>			  	
     	</form>
 	</div>
-	<div class="col-md-6">
-		<h2>Danh Sách Chủ Đề Học</h2>
-		<div>
-			<img class="col-md-6" src="https://previews.123rf.com/images/dstarky/dstarky1701/dstarky170101187/69424051-coding-icon-or-logo-in-modern-line-style-high-quality-black-outline-pictogram-for-web-site-design-an.jpg">
-			<div class="col-md-9" style="margin-left: 50%; margin-top: -40%">
-				<h3>Bài 2: Tạo website bằng Boostrap</h3>
+	<h2 style="padding-top: 2%; margin-left: 1%">Danh Sách Chủ Đề Học</h2>
+	<div class="row" style="padding-top: 2%">
+		<div class="col-md-8">
+			<div class="row">
+				<div class="col-md-4">
+					<img src="https://previews.123rf.com/images/dstarky/dstarky1701/dstarky170101187/69424051-coding-icon-or-logo-in-modern-line-style-high-quality-black-outline-pictogram-for-web-site-design-an.jpg" width="300" height="300">
+				</div>
+				<div class="col-md-8" style="margin-top: 6%">
+					<h3 style="margin-left: 5%">Bài 2: Tạo website bằng Boostrap - Lập trình Bootstrap/jquery</h3>
+				</div>
+				<div class="col-md-4">
+					<img src="https://previews.123rf.com/images/dstarky/dstarky1701/dstarky170101187/69424051-coding-icon-or-logo-in-modern-line-style-high-quality-black-outline-pictogram-for-web-site-design-an.jpg" width="300" height="300">
+				</div>
+				<div class="col-md-8" style="margin-top: 6%">
+					<h3 style="margin-left: 5%">Bài 2: Tạo website bằng Boostrap - Lập trình Bootstrap/jquery</h3>
+				</div>
+				<div class="col-md-4">
+					<img src="https://previews.123rf.com/images/dstarky/dstarky1701/dstarky170101187/69424051-coding-icon-or-logo-in-modern-line-style-high-quality-black-outline-pictogram-for-web-site-design-an.jpg" width="300" height="300">
+				</div>
+				<div class="col-md-8" style="margin-top: 6%">
+					<h3 style="margin-left: 5%">Bài 2: Tạo website bằng Boostrap - Lập trình Bootstrap/jquery</h3>
+				</div>
+				<div class="col-md-4">
+					<img src="https://previews.123rf.com/images/dstarky/dstarky1701/dstarky170101187/69424051-coding-icon-or-logo-in-modern-line-style-high-quality-black-outline-pictogram-for-web-site-design-an.jpg" width="300" height="300">
+				</div>
+				<div class="col-md-8" style="margin-top: 6%">
+					<h3 style="margin-left: 5%">Bài 2: Tạo website bằng Boostrap - Lập trình Bootstrap/jquery</h3>
+				</div>
+				<div class="col-md-4">
+					<img src="https://previews.123rf.com/images/dstarky/dstarky1701/dstarky170101187/69424051-coding-icon-or-logo-in-modern-line-style-high-quality-black-outline-pictogram-for-web-site-design-an.jpg" width="300" height="300">
+				</div>
+				<div class="col-md-8" style="margin-top: 6%">
+					<h3 style="margin-left: 5%">Bài 2: Tạo website bằng Boostrap - Lập trình Bootstrap/jquery</h3>
+				</div>
+				<div class="col-md-4">
+					<img src="https://previews.123rf.com/images/dstarky/dstarky1701/dstarky170101187/69424051-coding-icon-or-logo-in-modern-line-style-high-quality-black-outline-pictogram-for-web-site-design-an.jpg" width="300" height="300">
+				</div>
+				<div class="col-md-8" style="margin-top: 6%">
+					<h3 style="margin-left: 5%">Bài 2: Tạo website bằng Boostrap - Lập trình Bootstrap/jquery</h3>
+				</div>
+				<div class="col-md-4">
+					<img src="https://previews.123rf.com/images/dstarky/dstarky1701/dstarky170101187/69424051-coding-icon-or-logo-in-modern-line-style-high-quality-black-outline-pictogram-for-web-site-design-an.jpg" width="300" height="300">
+				</div>
+				<div class="col-md-8" style="margin-top: 6%">
+					<h3 style="margin-left: 5%">Bài 2: Tạo website bằng Boostrap - Lập trình Bootstrap/jquery</h3>
+				</div>
+				<div class="col-md-4">
+					<img src="https://previews.123rf.com/images/dstarky/dstarky1701/dstarky170101187/69424051-coding-icon-or-logo-in-modern-line-style-high-quality-black-outline-pictogram-for-web-site-design-an.jpg" width="300" height="300">
+				</div>
+				<div class="col-md-8" style="margin-top: 6%">
+					<h3 style="margin-left: 5%">Bài 2: Tạo website bằng Boostrap - Lập trình Bootstrap/jquery</h3>
+				</div>
+				<div class="col-md-4">
+					<img src="https://previews.123rf.com/images/dstarky/dstarky1701/dstarky170101187/69424051-coding-icon-or-logo-in-modern-line-style-high-quality-black-outline-pictogram-for-web-site-design-an.jpg" width="300" height="300">
+				</div>
+				<div class="col-md-8" style="margin-top: 6%">
+					<h3 style="margin-left: 5%">Bài 2: Tạo website bằng Boostrap - Lập trình Bootstrap/jquery</h3>
+				</div>
+				<ul class="pagination pl-5" style="margin-left: 15%; margin-top: 5%">
+					<li class="page-item"><a class="page-link" href="#"><</a></li>
+				  	<li class="page-item pl-3 active"><a class="page-link" href="#">1</a></li>
+				  	<li class="page-item pl-3"><a class="page-link" href="#">2</a></li>
+				  	<li class="page-item pl-3"><a class="page-link" href="#">3</a></li>
+				  	<li class="page-item pl-3"><a class="page-link" href="#">4</a></li>
+				  	<li class="page-item pl-3"><a class="page-link" href="#">5</a></li>
+				  	<li class="page-item pl-3"><a class="page-link" href="#">6</a></li>
+				  	<li class="page-item pl-3"><a class="page-link" href="#">></a></li>
+				</ul>
 			</div>
 		</div>
-		<div>
-			<img class="col-md-6" src="https://previews.123rf.com/images/dstarky/dstarky1701/dstarky170101187/69424051-coding-icon-or-logo-in-modern-line-style-high-quality-black-outline-pictogram-for-web-site-design-an.jpg">
-			<div class="col-md-9" style="margin-left: 50%; margin-top: -40%">
-				<h3>(Share Code) Tìm Hiểu Boostrap</h3>
+		<div class="col-md-4">
+			<div style="border: 1px solid; height: 50px; padding-top: 2%; padding-left: 2%; width: 330px">
+				<h4>Bài Tập Hôm Nay</h4>
+			</div>
+			<div class="row pt-3">
+				<div class="col-md-2">
+					<div class="rounded bg-secondary mx-1" style="color: white; font-weight: bold;"><center>1</center></div>
+				</div>
+				<div class="col-md-10">
+					[Share Code] Tìm hiểu về localStorage + JSON
+				</div>
+			</div>
+			<div style="border: 1px solid; height: 50px; padding-top: 2%; padding-left: 2%; width: 330px; margin-top: 10%">
+				<h4>Phân Loại Bài Viết</h4>
+			</div>
+			<div class="row">
+				<div class="col-md-2 pt-3">
+					<div class="rounded bg-secondary mx-1" style="color: white; font-weight: bold;"><center>1</center></div>
+				</div>
+				<div class="col-md-10 pt-3">
+					Lý Thuyết
+				</div>
+				<div class="col-md-2 pt-3">
+					<div class="rounded bg-secondary mx-1" style="color: white; font-weight: bold;"><center>2</center></div>
+				</div>
+				<div class="col-md-10 pt-3">
+					Bài Tập
+				</div>
+				<div class="col-md-2 pt-3">
+					<div class="rounded bg-secondary mx-1" style="color: white; font-weight: bold;"><center>3</center></div>
+				</div>
+				<div class="col-md-10 pt-3">
+					Examination & Test
+				</div>
+				<div class="col-md-2 pt-3">
+					<div class="rounded bg-secondary mx-1" style="color: white; font-weight: bold;"><center>4</center></div>
+				</div>
+				<div class="col-md-10 pt-3">
+					Source Code Chia Sẻ
+				</div>
+				<div class="col-md-2 pt-3">
+					<div class="rounded bg-secondary mx-1" style="color: white; font-weight: bold;"><center>5</center></div>
+				</div>
+				<div class="col-md-10 pt-3">
+					Tài Liệu Học
+				</div>
+			</div>
+			<div style="border: 1px solid; height: 50px; padding-top: 2%; padding-left: 2%; width: 330px; margin-top: 10%">
+				<h4>Danh Sách Bài Học</h4>
+			</div>
+			<div class="row">
+				<div class="col-md-2 pt-3">
+					<div class="rounded bg-secondary mx-1" style="color: white; font-weight: bold;"><center>1</center></div>
+				</div>
+				<div class="col-md-10 pt-3">
+					[Share Code] Tìm hiểu bootstrap
+				</div>
+				<div class="col-md-2 pt-3">
+					<div class="rounded bg-secondary mx-1" style="color: white; font-weight: bold;"><center>2</center></div>
+				</div>
+				<div class="col-md-10 pt-3">
+					01. Hướng dẫn cài đặt bootstrap + jquery - học lập trình bằng bootstrap+ Jquery
+				</div>
+				<div class="col-md-2 pt-3">
+					<div class="rounded bg-secondary mx-1" style="color: white; font-weight: bold;"><center>3</center></div>
+				</div>
+				<div class="col-md-10 pt-3">
+					02. Học bootstrap qua ví dụ 2- Bootstrap
+				</div>
+				<div class="col-md-2 pt-3">
+					<div class="rounded bg-secondary mx-1" style="color: white; font-weight: bold;"><center>4</center></div>
+				</div>
+				<div class="col-md-10 pt-3">
+					03. Học bootstrap qua ví dụ 3 - Bootstrap
+				</div>
+				<div class="col-md-2 pt-3">
+					<div class="rounded bg-secondary mx-1" style="color: white; font-weight: bold;"><center>5</center></div>
+				</div>
+				<div class="col-md-10 pt-3">
+					04. Thao tác lên tags html bằng jquery - Bootstrap
+				</div>
+				<div class="col-md-2 pt-3">
+					<div class="rounded bg-secondary mx-1" style="color: white; font-weight: bold;"><center>6</center></div>
+				</div>
+				<div class="col-md-10 pt-3">
+					05. Xử lý sự kiện trong jquery (events in jquery) - Bootstrap
+				</div>
+				<div class="col-md-2 pt-3">
+					<div class="rounded bg-secondary mx-1" style="color: white; font-weight: bold;"><center>7</center></div>
+				</div>
+				<div class="col-md-10 pt-3">
+					06. Viết trang web quản lý sinh viên bằng jquey + bootstrap phần 1
+				</div>
+				<div class="col-md-2 pt-3">
+					<div class="rounded bg-secondary mx-1" style="color: white; font-weight: bold;"><center>8</center></div>
+				</div>
+				<div class="col-md-10 pt-3">
+					07. Viết trang web quản lý sinh viên bằng jquey + bootstrap phần 2
+				</div>
+				<div class="col-md-2 pt-3">
+					<div class="rounded bg-secondary mx-1" style="color: white; font-weight: bold;"><center>9</center></div>
+				</div>
+				<div class="col-md-10 pt-3">
+					08. Hướng dẫn học bootstrap qua ví dụ dự án web đồng hồ - bootstrap
+				</div>
+				<div class="col-md-2 pt-3">
+					<div class="rounded bg-secondary mx-1" style="color: white; font-weight: bold;"><center>10</center></div>
+				</div>
+				<div class="col-md-10 pt-3">
+					Bài 1 - Tạo website bằng bootstrap 4				
+				</div>
+				<div class="col-md-2 pt-3">
+					<div class="rounded bg-secondary mx-1" style="color: white; font-weight: bold;"><center>11</center></div>
+				</div>
+				<div class="col-md-10 pt-3">
+					Bài 2 - Tạo website bằng bootstrap - Lập trình bootstrap/jquery
+				</div>
+				<div class="col-md-2 pt-3">
+					<div class="rounded bg-secondary mx-1" style="color: white; font-weight: bold;"><center>12</center></div>
+				</div>
+				<div class="col-md-10 pt-3">
+					Bootstrap 4 - Form đăng ký tài khoản người dùng
+				</div>
+				<div class="col-md-2 pt-3">
+					<div class="rounded bg-secondary mx-1" style="color: white; font-weight: bold;"><center>13</center></div>
+				</div>
+				<div class="col-md-10 pt-3">
+					Bootstrap 4 - Giới Thiệu
+				</div>
+				<div class="col-md-2 pt-3">
+					<div class="rounded bg-secondary mx-1" style="color: white; font-weight: bold;"><center>14</center></div>
+				</div>
+				<div class="col-md-10 pt-3">
+					Bootstrap 4 Alerts
+				</div>
+				<div class="col-md-2 pt-3">
+					<div class="rounded bg-secondary mx-1" style="color: white; font-weight: bold;"><center>15</center></div>
+				</div>
+				<div class="col-md-10 pt-3">
+					Bootstrap 4 Badges
+				</div>
+			</div>
+			<div style="border: 1px solid; height: 50px; padding-top: 2%; padding-left: 2%; width: 330px; margin-top: 10%">
+				<h4>Quick Quizz!!</h4>
+			</div>
+			<div style="width: 340px; background-color: #d7d7d9; margin-top: 6%; padding-left: 2%">
+				<div class="row pt-2">
+					<div class="col-md-2">
+						<img src="https://www.gravatar.com/avatar/ae8d66100c882095c429167b0fc6737f.jpg?s=80&d=mm&r=g" width="30" height="30" style="border-radius: 50%">
+					</div>
+					<div class="col-md-10">
+						<b>TRẦN VĂN ĐIỆP</b>
+						<br>20:34 23/04/2020
+					</div>
+				</div>
+				<b>Bạn thích làm về mảng nào nhất?</b>
+				<div class="row mt-2">
+					<div class="col-md-1 mt-2">
+						<input type="checkbox">
+					</div>
+					<div class="col-md-4 mt-2">
+						Lập Trình Mobile Android
+					</div>
+					<div class="col-md-7 mt-2">
+						<img src="https://www.gravatar.com/avatar/ae8d66100c882095c429167b0fc6737f.jpg?s=80&d=mm&r=g" width="30" height="30" style="border-radius: 50%">
+						<img src="https://www.gravatar.com/avatar/af7b1a912cb63a5c2d1432db54b2f2dd.jpg?s=80&d=mm&r=g" width="30" height="30" style="border-radius: 50%">
+						<img src="https://www.gravatar.com/avatar/af7b1a912cb63a5c2d1432db54b2f2dd.jpg?s=80&d=mm&r=g" width="30" height="30" style="border-radius: 50%">
+						<img src="https://www.gravatar.com/avatar/af7b1a912cb63a5c2d1432db54b2f2dd.jpg?s=80&d=mm&r=g" width="30" height="30" style="border-radius: 50%">
+					</div>
+					<div class="col-md-1 mt-2">
+						<input type="checkbox">
+					</div>
+					<div class="col-md-4 mt-2">
+						Lập Trình Frontend
+					</div>
+					<div class="col-md-7 mt-2">
+						<img src="https://www.gravatar.com/avatar/ae8d66100c882095c429167b0fc6737f.jpg?s=80&d=mm&r=g" width="30" height="30" style="border-radius: 50%">
+						<img src="https://www.gravatar.com/avatar/af7b1a912cb63a5c2d1432db54b2f2dd.jpg?s=80&d=mm&r=g" width="30" height="30" style="border-radius: 50%">
+						<img src="https://www.gravatar.com/avatar/af7b1a912cb63a5c2d1432db54b2f2dd.jpg?s=80&d=mm&r=g" width="30" height="30" style="border-radius: 50%">
+						<img src="https://www.gravatar.com/avatar/af7b1a912cb63a5c2d1432db54b2f2dd.jpg?s=80&d=mm&r=g" width="30" height="30" style="border-radius: 50%">
+					</div>
+					<div class="col-md-1 mt-2">
+						<input type="checkbox">
+					</div>
+					<div class="col-md-4 mt-2">
+						Lập trình PHP/Laravel
+					</div>
+					<div class="col-md-7 mt-2">
+						<img src="https://www.gravatar.com/avatar/ae8d66100c882095c429167b0fc6737f.jpg?s=80&d=mm&r=g" width="30" height="30" style="border-radius: 50%">
+						<img src="https://www.gravatar.com/avatar/af7b1a912cb63a5c2d1432db54b2f2dd.jpg?s=80&d=mm&r=g" width="30" height="30" style="border-radius: 50%">
+						<img src="https://www.gravatar.com/avatar/af7b1a912cb63a5c2d1432db54b2f2dd.jpg?s=80&d=mm&r=g" width="30" height="30" style="border-radius: 50%">
+						<img src="https://www.gravatar.com/avatar/af7b1a912cb63a5c2d1432db54b2f2dd.jpg?s=80&d=mm&r=g" width="30" height="30" style="border-radius: 50%">
+					</div>
+					<div class="col-md-1 mt-2">
+						<input type="checkbox">
+					</div>
+					<div class="col-md-4 mt-2">
+						Theo Java Web (SpringBoot, ...)
+					</div>
+					<div class="col-md-7 mt-2">
+						<img src="https://www.gravatar.com/avatar/ae8d66100c882095c429167b0fc6737f.jpg?s=80&d=mm&r=g" width="30" height="30" style="border-radius: 50%">
+						<img src="https://www.gravatar.com/avatar/af7b1a912cb63a5c2d1432db54b2f2dd.jpg?s=80&d=mm&r=g" width="30" height="30" style="border-radius: 50%">
+						<img src="https://www.gravatar.com/avatar/af7b1a912cb63a5c2d1432db54b2f2dd.jpg?s=80&d=mm&r=g" width="30" height="30" style="border-radius: 50%">
+						<img src="https://www.gravatar.com/avatar/af7b1a912cb63a5c2d1432db54b2f2dd.jpg?s=80&d=mm&r=g" width="30" height="30" style="border-radius: 50%">
+					</div>
+					<div class="col-md-1 mt-2">
+						<input type="checkbox">
+					</div>
+					<div class="col-md-4 mt-2">
+						Theo NodeJS
+					</div>
+					<div class="col-md-7 mt-2">
+						<img src="https://www.gravatar.com/avatar/ae8d66100c882095c429167b0fc6737f.jpg?s=80&d=mm&r=g" width="30" height="30" style="border-radius: 50%">
+						<img src="https://www.gravatar.com/avatar/af7b1a912cb63a5c2d1432db54b2f2dd.jpg?s=80&d=mm&r=g" width="30" height="30" style="border-radius: 50%">
+						<img src="https://www.gravatar.com/avatar/af7b1a912cb63a5c2d1432db54b2f2dd.jpg?s=80&d=mm&r=g" width="30" height="30" style="border-radius: 50%">
+						<img src="https://www.gravatar.com/avatar/af7b1a912cb63a5c2d1432db54b2f2dd.jpg?s=80&d=mm&r=g" width="30" height="30" style="border-radius: 50%">
+					</div>
+					<div class="col-md-1 mt-2">
+						<input type="checkbox">
+					</div>
+					<div class="col-md-4 mt-2">
+						Theo Ruby on Rail
+					</div>
+					<div class="col-md-7 mt-2">
+						<img src="https://www.gravatar.com/avatar/ae8d66100c882095c429167b0fc6737f.jpg?s=80&d=mm&r=g" width="30" height="30" style="border-radius: 50%">
+						<img src="https://www.gravatar.com/avatar/af7b1a912cb63a5c2d1432db54b2f2dd.jpg?s=80&d=mm&r=g" width="30" height="30" style="border-radius: 50%">
+						<img src="https://www.gravatar.com/avatar/af7b1a912cb63a5c2d1432db54b2f2dd.jpg?s=80&d=mm&r=g" width="30" height="30" style="border-radius: 50%">
+						<img src="https://www.gravatar.com/avatar/af7b1a912cb63a5c2d1432db54b2f2dd.jpg?s=80&d=mm&r=g" width="30" height="30" style="border-radius: 50%">
+					</div>
+					<div class="col-md-1 mt-2">
+						<input type="checkbox">
+					</div>
+					<div class="col-md-4 mt-2">
+						Không biết gì để theo :D :P :D
+					</div>
+					<div class="col-md-7 mt-2">
+						<img src="https://www.gravatar.com/avatar/ae8d66100c882095c429167b0fc6737f.jpg?s=80&d=mm&r=g" width="30" height="30" style="border-radius: 50%">
+						<img src="https://www.gravatar.com/avatar/af7b1a912cb63a5c2d1432db54b2f2dd.jpg?s=80&d=mm&r=g" width="30" height="30" style="border-radius: 50%">
+						<img src="https://www.gravatar.com/avatar/af7b1a912cb63a5c2d1432db54b2f2dd.jpg?s=80&d=mm&r=g" width="30" height="30" style="border-radius: 50%">
+						<img src="https://www.gravatar.com/avatar/af7b1a912cb63a5c2d1432db54b2f2dd.jpg?s=80&d=mm&r=g" width="30" height="30" style="border-radius: 50%">
+					</div>
+					<div class="col-md-12 mt-2 ml-2">
+						<a href="#">>>Hiển Thị Quizz</a>
+					</div>
+				</div>
+			</div>
+			<div style="border: 1px solid; height: 50px; padding-top: 2%; padding-left: 2%; width: 330px; margin-top: 10%">
+				<h4>Theo Dõi Học Trên Gokisoft</h4>
+			</div>
+			<div style="background-image: url('https://res.cloudinary.com/ziczacgroup/image/upload/v1600320406/tufegz0akqdcgj7e765r.png');background-repeat: no-repeat; background-size: 1100px; background-position: center center; margin-top: 5%">
+				<div class="row pl-2 pt-2">
+					<div class="col-md-2">
+						<img src="https://scontent.fhan2-5.fna.fbcdn.net/v/t1.0-1/cp0/p80x80/38918465_321115411966265_8152250967539056640_n.png?_nc_cat=107&ccb=2&_nc_sid=dbb9e7&_nc_ohc=D1gQw0IbRbgAX-JsZuK&_nc_ht=scontent.fhan2-5.fna&oh=4878ae6b9472e5f9ff032041564e1a01&oe=5FD3CEB4" width="50" height="50">
+					</div>
+					<div class="col-md-10">
+						<a href="#" style="color: white"><h5>GokiSoft.com</h5></a>
+						<small style="color: white">976 lượt thích</small>
+					</div>
+				</div>
+				<br>
+				<div class="row pl-2 pb-2">
+					<div class="col-md-7">
+						<button>
+							<i class="fa fa-facebook-official" style="color: blue"></i>Thích Trang
+						</button>
+					</div>
+					<div class="col-md-5 pl-4">
+						<button>
+							<i class="fas fa-pen"></i>Đăng ký
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="float-right; position-fixed">
+				<button>adsf</button>
 			</div>
 		</div>
-		<div>
-			<img class="col-md-6" src="https://previews.123rf.com/images/dstarky/dstarky1701/dstarky170101187/69424051-coding-icon-or-logo-in-modern-line-style-high-quality-black-outline-pictogram-for-web-site-design-an.jpg">
-			<div class="col-md-9" style="margin-left: 50%; margin-top: -40%">
-				<h3>Bài 1: Tạo website bằng Boostrap</h3>
+	</div>
+	<div class="footer bg-dark">
+		<div class="row">
+			<div class="col-md-3 mt-2 ml-3">
+				<img src="https://res.cloudinary.com/ziczacgroup/image/upload/v1587623413/qhwncq3wtjkrsyke6ayw.png" width="200"><br><br>
+				<p style="color: #d9d7d7; font-size: smaller;">Chúng tôi tạo ra website nay với mong muốn chia sẻ những kiến thức và kinh nghiệm thực tiễn mà chung tôi đã có được - nhằm giúp cho những bạn mới bắt đầu học lập trình trở nên dễ dàng hơn và có lộ trình học cụ thể & rút ngắn thời gian học<br><br>
+				Bạn có câu hỏi? Hãy email chúng tôi tại</p> 
+				<a href="gokisoft.com@gmail.com">gokisoft.com@gmail.com</a>
+				<a href="#" class="nav-link disabled">
+					<i class="fa fa-facebook fa-lg"></i>
+					<i class="fab fa-twitter fa-lg"></i>
+					<i class="fab fa-pinterest-p fa-lg"></i>
+					<i class="fab fa-fab fa-vimeo-v fa-lg"></i>
+					<i class="fab fa-youtube fa-lg"></i>
+				</a> 
+			</div>
+			<div class="col-md-4 mt-5" style="color: white">
+				<h4><b>BÀI VIẾT NỔI BẬT</b></h4>
+				<div class="row pt-4">
+					<div class="col-md-3">
+						<img src="https://res.cloudinary.com/ziczacgroup/image/upload/v1583834689/vf4gyxt7gmthx4eykvlp.jpg" width="80" height="80">
+					</div>
+					<div class="col-md-9">
+						[Share Code] Tìm hiểu về localStorage + JSON<br>
+						<small>11-11-2020</small>
+					</div>
+					<div class="col-md-3 pt-3">
+						<img src="https://res.cloudinary.com/ziczacgroup/image/upload/v1584027866/dxbuncyhevc9ck1vjigy.png" width="80" height="80">
+					</div>
+					<div class="col-md-9 pt-3">
+						EJB-EAD- Viết chương trình quản lý sinh viên EJB - Web - SessionBean - Phần 2<br>
+						<small>09-11-2020</small>
+					</div>
+					<div class="col-md-3 pt-1">
+						<img src="https://res.cloudinary.com/ziczacgroup/image/upload/v1584027866/dxbuncyhevc9ck1vjigy.png" width="80" height="80">
+					</div>
+					<div class="col-md-9 pt-1 pb-2">
+						EJB-EAD- Viết chương trình quản lý sinh viên EJB - Web - SessionBean - Phần 1<br>
+						<small>09-11-2020</small>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 mt-5" style="color: white">
+				<h4><b>BÀI VIẾT MỚI NHẤT</b></h4>
+				<div class="row pt-4">
+					<div class="col-md-3">
+						<img src="https://res.cloudinary.com/ziczacgroup/image/upload/v1583834689/vf4gyxt7gmthx4eykvlp.jpg" width="80" height="80">
+					</div>
+					<div class="col-md-9">
+						Thiết kế website >> nettruyen.com<br>
+						<small>09-11-2020</small>
+					</div>
+					<div class="col-md-3 pt-3">
+						<img src="https://res.cloudinary.com/ziczacgroup/image/upload/v1583834689/vf4gyxt7gmthx4eykvlp.jpg" width="80" height="80">
+					</div>
+					<div class="col-md-9 pt-3">
+						[Share Code] Tìm hiểu bootstrap<br>
+						<small>09-11-2020</small>
+					</div>
+					<div class="col-md-3 pt-3">
+						<img src="https://res.cloudinary.com/ziczacgroup/image/upload/v1584027866/dxbuncyhevc9ck1vjigy.png" width="80" height="80">
+					</div>
+					<div class="col-md-9 pt-3">
+						EJB-EAD- Overview chương trình quản lý sách SessionBean + TMS<br>
+						<small>06-11-2020</small>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div>
-			<img class="col-md-6" src="https://res.cloudinary.com/ziczacgroup/image/upload/v1602505537/crzwbbgu9jyokggii5zq.jpg">
-			<div class="col-md-9" style="margin-left: 50%; margin-top: -40%">
-				<h3>Boostrap 4 - Giới Thiệu</h3>
-			</div>
-		</div>
-		<div>
-			<img class="col-md-6" src="https://res.cloudinary.com/ziczacgroup/image/upload/v1602505537/crzwbbgu9jyokggii5zq.jpg">
-			<div class="col-md-9" style="margin-left: 50%; margin-top: -40%">
-				<h3>Boostrap 4 - Containers</h3>
-			</div>
-		</div>
-		<div>
-			<img class="col-md-6" src="https://res.cloudinary.com/ziczacgroup/image/upload/v1602505537/crzwbbgu9jyokggii5zq.jpg">
-			<div class="col-md-9" style="margin-left: 50%; margin-top: -40%">
-				<h3>Boostrap 4 - Grids</h3>
-			</div>
-		</div>
-		<div>
-			<img class="col-md-6" src="https://res.cloudinary.com/ziczacgroup/image/upload/v1602505537/crzwbbgu9jyokggii5zq.jpg">
-			<div class="col-md-9" style="margin-left: 50%; margin-top: -40%">
-				<h3>Boostrap 4 - Text</h3>
-			</div>
-		</div>
-		<div>
-			<img class="col-md-6" src="https://res.cloudinary.com/ziczacgroup/image/upload/v1602505537/crzwbbgu9jyokggii5zq.jpg">
-			<div class="col-md-9" style="margin-left: 50%; margin-top: -40%">
-				<h3>Boostrap 4 - Colors</h3>
-			</div>
-		</div>
-		<div>
-			<img class="col-md-6" src="https://res.cloudinary.com/ziczacgroup/image/upload/v1602505537/crzwbbgu9jyokggii5zq.jpg">
-			<div class="col-md-9" style="margin-left: 50%; margin-top: -40%">
-				<h3>Boostrap 4 - Tables</h3>
-			</div>
-		</div>
-		<div>
-			<img class="col-md-6" src="https://res.cloudinary.com/ziczacgroup/image/upload/v1602505537/crzwbbgu9jyokggii5zq.jpg">
-			<div class="col-md-9" style="margin-left: 50%; margin-top: -40%">
-				<h3>Boostrap 4 - Images</h3>
-			</div>
-		</div>
+	</div>
+	<div style="background-color: black; padding-top: 3%; padding-bottom: 3%">
+		<center>
+			<a href="#" style="color: green">Copyright 2019 All rights reserved</a>
+		</center>
 	</div>
 </body>
 </html>

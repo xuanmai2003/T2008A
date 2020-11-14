@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registation Form * Form Tutorial</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h2 class="text-center">Registation Form - Input User's Detail Information</h2>
+			</div>
+			<div class="panel-body">
+				<!-- POST & GET -->
+				<form method="post" onsubmit="return checkData();" id="myForm">
+					<div class="form-group">
+					  <label for="usr">Name:</label>
+					  <input required="true" type="text" class="form-control" id="usr" name="username" value="">
+					</div>
+					<div class="form-group">
+					  <label for="email">Email:</label>
+					  <input required="true" type="email" class="form-control" id="email" name="email">
+					</div>
+					<div class="form-group">
+					  <label for="birthday">Birthday:</label>
+					  <input type="date" class="form-control" id="birthday" name="birthday">
+					</div>
+					<div class="form-group">
+					  <label for="address">Address:</label>
+					  <input type="text" class="form-control" id="address" name="address">
+					</div>
+					<button type="submit" class="btn btn-success">Register</button>
+					<button type="button" class="btn btn-danger" onclick="registerUser2()">Register User</button>
+					<button type="button" class="btn btn-info" onclick="readData()">Read Data</button>
+				</form>
+
+				<table class="table table-hover table-bordered">
+					<thead>
+						<tr>
+							<th>STT</th>
+							<th>Name</th>
+							<th>Email</th>
+							<th>Birthday</th>
+							<th>Address</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$(function() {
+			// readData()
+		})
+
+		function registerUser2() {
+			//code bat ky source code => theo nhu nghiep vu yeu cau
+			//Kich hoat => day du lieu len server
+			// document.getElementById('myForm').submit()
+			// $('#myForm').submit()
+			//Cach 2: Su dung Ajax
+
+			//su ly du lieu
+			// fullname = $('#usr').val()
+			// email = $('#email').val()
+			// birthday = $('#birthday').val()
+			// address = $('#address').val()
+
+			// console.log(fullname)
+			// console.log(email)
+			// console.log(birthday)
+			// console.log(address)
+			// var tags = $('input')
+			// for (var i = 0; i < tags.length; i++) {
+			// 	v = $(tags[i]).val()
+			// 	console.log(v)
+			// }
+
+			// $('input').each(function() {
+			// 	v = $(this).val()
+			// 	console.log(v)
+			// })
+			var name = $('#usr').val()
+			var email = $('#email').val()
+			var birthday = $('#birthday').val()
+			var address = $('#address').val()
+
+			var std = {
+				'name': name,
+				'email': email,
+				'birthday': birthday,
+				'address': address
+			}
+			var json = JSON.stringify(std)
+			localStorage.setItem('std', json)
+
+			// data = 	`[{"fullname":"TRAN VAN DIEP","email":"tranvandiep.it@gmail.com","address":"Nam Dinh","age":60},{"fullname":"TRAN VAN DIEP","email":"tranvandiep.it@gmail.com","address":"Nam Dinh","age":60}]`
+			// //json string.
+			// //chuyen json string to object/array
+			// dataArr = JSON.parse(data)
+			// console.log(dataArr)
+			// console.log(dataArr[0].fullname)
+
+			console.log(address)
+			// localStorage.setItem('ls_address', address)
+			// localStorage.setItem('ls_email', email)
+		}
+
+		function readData() {
+			// address = localStorage.getItem('ls_address')
+			// email = localStorage.getItem('ls_email')
+			// fullname = localStorage.getItem('ls_username')
+			var json = localStorage.getItem('std')
+			std = JSON.parse(json)
+
+			$('#address').val(std.address)
+			$('#email').val(std.email)
+			$('#usr').val(std.name)
+			$('#birthday').val(std.birthday)
+		}
+
+		function checkData() {
+			console.log('test....')
+			//TH: username => nhan cac gia tri sau (abc, a123, a234, b123, c123) => chi co the su dung dc bang js.
+			return false;//Su dung return false.
+		}
+	</script>
+</body>
+</html>
