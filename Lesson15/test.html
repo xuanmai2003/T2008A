@@ -1,24 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Login</title>
 	<meta charset="utf-8">
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-
-	<!-- jQuery library -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-	<!-- Popper JS -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-	<!-- Latest compiled JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
-	<meta name='viewport' content='width=device-width, initial-scale=1'>
-	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<style type="text/css">
+		b{
+			font-family: Arial, Helvetica, sans-serif;
+		}
+	</style>
 </head>
 <body>
+	<div class="container" style="background: #FFFFCC; width: 600px">
+		<b style="color: #0000CC; font-size: larger; padding-top: 2%">ĐĂNG NHẬP HỆ THỐNG</b>
+		<div class="row pt-2">
+			<div class="col-md-3">
+				<img src="login.png">
+			</div>
+			<div class="col-md-3">
+				<b style="color: #000066">Tài khoản</b><br>
+				<b style="color: #00006; margin-top: 2%">Mật khẩu</b><br>
+			</div>
+			<div class="col-md-5">
+				<input id="account" type="text" name="account" required="yes" >
+				<br>
+				<input id="pass" type="text" name="pass" required="yes" style="margin-top: 2%">
+				<br>
+				<input type="button" name="dangnhap" value="Đăng nhập" style="margin-top: 2%" onclick="submit()">
+				<input type="button" name="again" value="Nhập lại" style="margin-top: 2%" onclick="reset()">
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function submit(){
+        	 if(document.getElementById('account').value!='' && document.getElementById('pass').value!=''){
+                alert('Đăng nhập thành công')
+            }
+            else{
+                alert('Xin hãy điền đầy đủ thông tin!')
+            }
+        }
 
+        function reset(){
+        	document.getElementById('account').value=''
+        	document.getElementById('pass').value=''
+        }
+	</script>
 </body>
 </html>

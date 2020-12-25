@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mượn sách</title>
+	<meta charset="utf-8">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<style type="text/css">
+		b{
+			font-family: Arial, Helvetica, sans-serif;
+			color: #000066;
+		}
+		button{
+			background-color: #CCCCCC;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+	</style>
+</head>
+<body>
+	<div class="container" style="background: #FFFFCC; width: 700px">
+		<div class="row pt-2 pb-2">
+			<div class="col-md-3 text-right">
+				<img src="regis.png" width="50"><br>
+				<b>Mã sinh viên</b><br>
+				<b>Họ và tên</b><br>
+				<b>Loại sách</b><br>
+				<b>Tên sách</b><br>
+				<b>Ngày mượn</b><br>
+				<b>Ngày trả</b>
+			</div>
+			<div class="col-md-7">
+				<h3 style="color: #0000CC; font-family: Arial, Helvetica, sans-serif;">PHIẾU MƯỢN SÁCH</h3>
+				<input id="studentno" type="number" name="studentno"><br>
+				<input id="name" type="text" name="name"><br>
+				<select id="booktype">
+					<option>--Chọn loại sách--</option>
+					<option>Khoa học</option>
+					<option>Văn học</option>
+				</select><br>
+				<input id="bookname" type="text" name="bookname" size="50"><br>
+				<input id="muon" type="date" name="muon"><br>
+				<input id="tra" type="date" name="tra"><br>
+				<button style="margin-top: 2%" onclick="submit()"><img src="log_in.png">Đăng kí</button>
+				<button style="margin-top: 2%" onclick="reset()"><img src="cancel.png">Nhập lại</button>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function submit(){
+        	 if(document.getElementById('studentno').value!='' && document.getElementById('name').value!=''&& document.getElementById('booktype').value!='--Chọn loại sách--'&& document.getElementById('bookname').value!=''&& document.getElementById('muon').value!=''&& document.getElementById('tra').value!=''){
+                alert('Đăng kí thành công')
+            }
+            else{
+                alert('Xin hãy điền đầy đủ thông tin!')
+            }
+        }  
+
+        function reset(){
+        	document.getElementById('studentno').value=''
+        	document.getElementById('name').value=''
+        	document.getElementById('booktype').value='--Chọn loại sách--'
+        	document.getElementById('bookname').value=''
+        	document.getElementById('muon').value=''
+        	document.getElementById('tra').value=''
+        }
+	</script>
+</body>
+</html>
